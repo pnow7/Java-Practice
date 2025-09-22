@@ -1,4 +1,4 @@
-package test.test04.test0414_gitstart;
+package test.test04.test0414;
 /*
 단, N은 홀수라고 가정하자.
 
