@@ -1,4 +1,4 @@
-package test.test09.test0921;
+package study.algorithm.divide_conquer;
 
 /*
 

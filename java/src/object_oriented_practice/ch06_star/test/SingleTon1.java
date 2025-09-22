@@ -1,7 +1,5 @@
 package object_oriented_practice.ch06_star.test;
 
-import thisisjava.ch06.exam15.Singleton;
-
 public class SingleTon1 {
 	//18
 	private static SingleTon1 singleton1 = new SingleTon1();
