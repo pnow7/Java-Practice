@@ -24,6 +24,7 @@ public class Combination1 {
 		
 		int T = Integer.parseInt(br.readLine());
 		int[] result1 = new int[T];
+		
 		//Long보다 값이 커질대 BigInteger써야한다
 		for(int i = 0; i < T; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
