@@ -13,7 +13,7 @@ package test.test09.test0923;
 import java.io.*;
 import java.util.*;
 
-public class test1629 {
+public class Main1629 {
     
     static int C;
 
