@@ -2,6 +2,8 @@ package study.algorithm.divide_conquer;
 
 /*
 
+** Character.getNumericValue **
+
 [입력]
 8
 11110000

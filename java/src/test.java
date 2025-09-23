@@ -3,74 +3,79 @@ import java.util.*;
 
 /*
 
-- 사각형으로 칠해진 부분 개수 세기
-
 [입력]
-8
-1 1 0 0 0 0 1 1
-1 1 0 0 0 0 1 1
-0 0 0 0 1 1 0 0
-0 0 0 0 1 1 0 0
-1 0 0 0 1 1 1 1
-0 1 0 0 1 1 1 1
-0 0 1 1 1 1 1 1
-0 0 1 1 1 1 1 1
+9
+0 0 0 1 1 1 -1 -1 -1
+0 0 0 1 1 1 -1 -1 -1
+0 0 0 1 1 1 -1 -1 -1
+1 1 1 0 0 0 0 0 0
+1 1 1 0 0 0 0 0 0
+1 1 1 0 0 0 0 0 0
+0 1 -1 0 1 -1 0 1 -1
+0 -1 1 0 1 -1 0 1 -1
+0 1 -1 1 0 -1 0 1 -1
 
 [출력]
-9
-7
+10
+12
+11
 
 */
 public class test {
     
-    public static int white = 0;
-    public static int blue = 0;
-    public static int[][] paper;
+    static int minusOne = 0;
+    static int zero = 0;
+    static int one = 0;
+    static int[][] paper;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
-
-        int[][] colorPaper = new int[N][N];
+        int[][] arr = new int[N][N];
         for (int i = 0; i < N; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
-                colorPaper[i][j] = Integer.parseInt(st.nextToken());
+                arr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
-        paper = colorPaper;
-        divideConquer(0, 0, N);
+        paper = arr;
 
-        System.out.println(white);
-        System.out.println(blue);
+        divideConquer(0, 0, N);
+        System.out.println(minusOne);
+        System.out.println(zero);
+        System.out.println(one);
         br.close();
     }
 
-    public static void divideConquer(int x, int y, int size) {
-        if (checkColor(x, y, size)) {
-            if (paper[x][y] == 0) {
-                white++;
+    static void divideConquer(int x, int y, int size) {
+        if (check(x, y, size)) {
+            if (paper[x][y] == -1) {
+                minusOne++;
+            } else if (paper[x][y] == 0) {
+                zero++;
             } else {
-                blue++;
+                one++;
             }
             return;
         }
-        
-        int newSize = size / 2;
-        divideConquer(x, y, newSize);
-        divideConquer(x, y + newSize, newSize);
-        divideConquer(x + newSize, y, newSize);
-        divideConquer(x + newSize, y + newSize, newSize);
+
+        int newSize = size / 3;
+
+        for (int i = 0 ; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                divideConquer(x + newSize * i, y + newSize * j, newSize);
+            }
+        }
     }
 
-    public static boolean checkColor(int x, int y, int size) {
-        int color = paper[x][y];
+    static boolean check(int x, int y, int size) {
+        int num = paper[x][y];
 
         for (int i = x; i < x + size; i++) {
             for (int j = y; j < y + size; j++) {
-                if (paper[i][j] != color) {
+                if (paper[i][j] != num) {
                     return false;
                 }
             }
