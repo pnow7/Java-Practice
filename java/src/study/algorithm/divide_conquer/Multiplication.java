@@ -1,4 +1,4 @@
-package test.test09.test0923;
+package study.algorithm.divide_conquer;
 
 /*
 
@@ -13,7 +13,7 @@ package test.test09.test0923;
 import java.io.*;
 import java.util.*;
 
-public class Main1629 {
+public class Multiplication {
     
     static int C;
 
