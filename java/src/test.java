@@ -24,7 +24,7 @@ public class test {
         if (exponent % 2 == 0) {
             return (temp * temp) % C;
         } else {
-            return (((temp * temp)) % C) * (base % C) % C;
+            return ((temp * temp % C) * (base % C)) % C;
         }
     }
 }
