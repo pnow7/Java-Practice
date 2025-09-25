@@ -2,6 +2,17 @@ package study.algorithm.divide_conquer;
 
 /*
 
+페르마의 소정리
+- a^p-1 ≡ 1 (mod P) -> 양변을 a로 나눈다
+- a^p-2 ≡ a^-1 (mod P)
+=> a^-1 ≡ a^p-2 (mod P)
+
+P가 소수, a가 P의 배수가 아닐때 
+K! < P, (N - K)! < P 이면
+
+(K!)^-1 ≡ (K!)^p-2 (mod P)
+((N - K)!)^-1 ≡ ((N - K)!)^p-2 (mod P)
+
 [입력]
 5 2
 

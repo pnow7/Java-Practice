@@ -53,7 +53,7 @@ public class Main11401 {
         if (exponent % 2 == 0) {
             return (temp * temp) % p;
         } else {
-            return ((temp * temp % p) * (base % p)) % p;
+            return (temp * temp % p) * base % p;
         }
 
     }         
