@@ -1,3 +1,5 @@
+package test.test09.test0926;
+
 /*
 
 [입력]
@@ -26,23 +28,25 @@
 
 */
 
+
 import java.io.*;
 import java.util.*;
 
-public class test {
+public class Main10830 {
     
+    static int[][] matrix;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         
         int N = Integer.parseInt(st.nextToken());
-        long B = Integer.parseInt(st.nextToken());
+        long B = Long.parseLong(st.nextToken());
         
         int[][] arr = new int[N][N];
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
-                arr[i][j] = Integer.parseInt(st.nextToken());
+                arr[i][j] = Integer.parseInt(st.nextToken()) % 1000;
             }
         }
         
@@ -58,10 +62,11 @@ public class test {
         br.close();
     }
     
-    static int[][] identityMartrix(int[][] A) {
-        int[][] I = new int[A.length][A.length];
+    static int[][] identifyMatrix(int[][] A) {
+        int n = A.length;
         
-        for (int i = 0; i < A.length; i++) {
+        int[][] I = new int[n][n];
+        for (int i = 0; i < n; i++) {
             I[i][i] = 1;
         }
         
@@ -76,7 +81,7 @@ public class test {
             for (int j = 0; j < n; j++) {
                 long sum = 0;
                 for (int k = 0; k < n; k++) {
-                    sum += (long) A[i][k] * B[k][j];
+                    sum += (long) (A[i][k] * B[k][j]);
                 }
                 result[i][j] = (int) (sum % 1000);
             }
@@ -86,7 +91,7 @@ public class test {
     }
     
     static int[][] pow(int[][] A, long exponent) {
-        if (exponent == 0) return identityMartrix(A);
+        if (exponent == 0) return identifyMatrix(A);
         if (exponent == 1) return A;
         
         int[][] temp = pow(A, exponent / 2);
@@ -97,4 +102,5 @@ public class test {
             return multiply(multiply(temp, temp), A);
         }
     }
+    
 }

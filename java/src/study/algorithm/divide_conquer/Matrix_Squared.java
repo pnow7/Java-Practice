@@ -1,3 +1,5 @@
+package study.algorithm.divide_conquer;
+
 /*
 
 [입력]
@@ -26,18 +28,20 @@
 
 */
 
+
 import java.io.*;
 import java.util.*;
 
-public class test {
+public class Matrix_Squared {
     
+    static int[][] matrix;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        
+
         int N = Integer.parseInt(st.nextToken());
-        long B = Integer.parseInt(st.nextToken());
-        
+        int B = Integer.parseInt(st.nextToken());
+
         int[][] arr = new int[N][N];
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
@@ -45,34 +49,33 @@ public class test {
                 arr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-        
-        arr = pow(arr, B);
-        
+
+        int[][] result = pow(arr, B);
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                System.out.print(arr[i][j] + " ");
+                System.out.print(result[i][j] + " ");
             }
             System.out.println();
         }
-        
+
         br.close();
     }
-    
-    static int[][] identityMartrix(int[][] A) {
-        int[][] I = new int[A.length][A.length];
+
+    static int[][] identityMatrix(int N) {
+        int[][] I = new int[N][N];
         
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < N; i++) {
             I[i][i] = 1;
         }
-        
+
         return I;
     }
-    
+
     static int[][] multiply(int[][] A, int[][] B) {
         int n = A.length;
         
         int[][] result = new int[n][n];
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++ ) {
             for (int j = 0; j < n; j++) {
                 long sum = 0;
                 for (int k = 0; k < n; k++) {
@@ -81,20 +84,20 @@ public class test {
                 result[i][j] = (int) (sum % 1000);
             }
         }
-        
         return result;
     }
-    
+
     static int[][] pow(int[][] A, long exponent) {
-        if (exponent == 0) return identityMartrix(A);
+        if (exponent == 0) return identityMatrix(A.length);
         if (exponent == 1) return A;
-        
+
         int[][] temp = pow(A, exponent / 2);
-        
+
         if (exponent % 2 == 0) {
             return multiply(temp, temp);
         } else {
             return multiply(multiply(temp, temp), A);
         }
     }
+
 }

@@ -26,9 +26,9 @@ import java.util.*;
 
 public class MakingColordPaper {
 
-    public static int white = 0;
-    public static int blue = 0;
-    public static int[][] paper;
+    static int white = 0;
+    static int blue = 0;
+    static int[][] paper;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -51,7 +51,7 @@ public class MakingColordPaper {
         br.close();
     }
 
-    public static void divideConquer(int x, int y, int size) {
+    static void divideConquer(int x, int y, int size) {
         if (checkColor(x, y, size)) {
             if (paper[x][y] == 0) {
                 white++;
@@ -71,7 +71,7 @@ public class MakingColordPaper {
         divideConquer(x + newSize, y + newSize, newSize);
     }
 
-    public static boolean checkColor(int x, int y, int size) {
+    static boolean checkColor(int x, int y, int size) {
         int color = paper[x][y];
 
         for (int i = x; i < x + size; i++) {
