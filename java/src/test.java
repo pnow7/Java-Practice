@@ -36,32 +36,33 @@ public class test {
         StringTokenizer st = new StringTokenizer(br.readLine());
         
         int N = Integer.parseInt(st.nextToken());
-        long B = Integer.parseInt(st.nextToken());
+        long B = Long.parseLong(st.nextToken());
         
         int[][] arr = new int[N][N];
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
-                arr[i][j] = Integer.parseInt(st.nextToken());
+                arr[i][j] = Integer.parseInt(st.nextToken()) % 1000;
             }
         }
         
         arr = pow(arr, B);
-        
+
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
         }
-        
+
         br.close();
     }
     
-    static int[][] identityMartrix(int[][] A) {
-        int[][] I = new int[A.length][A.length];
+    static int[][] identityMatrix(int[][] A) {
+        int n = A.length;
         
-        for (int i = 0; i < A.length; i++) {
+        int[][] I = new int[n][n];
+        for (int i = 0; i < n; i++) {
             I[i][i] = 1;
         }
         
@@ -70,31 +71,32 @@ public class test {
     
     static int[][] multiply(int[][] A, int[][] B) {
         int n = A.length;
-        
+
         int[][] result = new int[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 long sum = 0;
                 for (int k = 0; k < n; k++) {
-                    sum += (long) A[i][k] * B[k][j];
+                    sum += (long) (A[i][k] * B[k][j]);
                 }
                 result[i][j] = (int) (sum % 1000);
             }
         }
-        
+
         return result;
     }
-    
+
     static int[][] pow(int[][] A, long exponent) {
-        if (exponent == 0) return identityMartrix(A);
+        if (exponent == 0) return identityMatrix(A);
         if (exponent == 1) return A;
-        
+
         int[][] temp = pow(A, exponent / 2);
-        
+
         if (exponent % 2 == 0) {
             return multiply(temp, temp);
         } else {
             return multiply(multiply(temp, temp), A);
         }
     }
+
 }
