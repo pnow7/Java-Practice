@@ -1,4 +1,4 @@
-package study.binarysearch;
+package study.algorithm.binarysearch;
 //10815
 //숫자 카드
 import java.io.*;

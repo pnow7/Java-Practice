@@ -1,4 +1,4 @@
-package study.binarysearch;
+package study.algorithm.binarysearch;
 //10816
 //숫자카드 2
 
