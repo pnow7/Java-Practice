@@ -48,12 +48,12 @@ public class Histogram {
         int mid = (start + end) / 2;                                                                // 절반으로 나누기
         int left = mid;
         int right = mid + 1;
-
-        long centerArea = 0;                                                                        // 초기 넓이 설정 (두 막대로 이루어진 직사각형)
+                                                                                                    // 초기 넓이 설정 (두 막대로 이루어진 직사각형)
         long leftArea = findMaxArea(heights, start, mid);                                           // 왼쪽과 오른쪽 부분 문제 해결하기
         long rightArea = findMaxArea(heights, mid + 1, end);
         long h = Math.min(heights[left], heights[right]);                                           // 두 막대의 높이가 다를 수 있으므로 둘 중 더 낮은 높이를 기준으로 해야 두 막대를 모두 포함하는 직사각형 만들 수 있음
-                                               
+        
+        long centerArea = 0;                                      
         centerArea = Math.max(leftArea, rightArea);                                                 
         centerArea = Math.max(centerArea, h * 2);                                                   // 그래서 곱하기 2를 하는 이유는 너비가 2이기 때문(작은사각형 높이 * 2)                                         
 
@@ -70,7 +70,7 @@ public class Histogram {
             centerArea = Math.max(centerArea, h * (right - left + 1));                              // 최대 넓이 갱신 -> h: 모든 막대들 중 가장 낮은 막대높이, left: 현재 직사각형의 왼쪽 끝 막대 인덱스, right: 오른쪽 끝 막대 인덱스
         }                                                                                           // 너비 계산은 예를 들면 left가 3이고 right가 5라면 5 - 3 + 1해야 너비가 3인걸 알 수 있음
 
-        return Math.max(Math.max(leftArea, rightArea), centerArea);                                 // 세 영역(왼쪽, 오른쪽, 가운데)의 넓이 중 최댓값 반환
+        return Math.max(centerArea, Math.max(leftArea, rightArea));                                 // 세 영역(왼쪽, 오른쪽, 가운데)의 넓이 중 최댓값 반환
     }
 
 }

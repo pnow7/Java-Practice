@@ -49,11 +49,11 @@ public class Main6549 {
         int left = mid;
         int right = mid + 1;
         
-        long centerArea = 0;
         long leftArea = findMaxArea(heights, start, mid);
         long rightArea = findMaxArea(heights, mid + 1, end);
         long h = Math.min(heights[left], heights[right]);
         
+        long centerArea = 0;
         centerArea = Math.max(leftArea, rightArea);
         centerArea = Math.max(centerArea, h * 2);
         
@@ -69,7 +69,7 @@ public class Main6549 {
             centerArea = Math.max(centerArea, h * (right - left + 1));
         }
         
-        return Math.max(Math.max(leftArea, rightArea), centerArea);
+        return Math.max(centerArea, Math.max(leftArea, rightArea));
     }
     
 }
