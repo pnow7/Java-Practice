@@ -1,11 +1,22 @@
 package study.algorithm.binarysearch;
-//10815
-//숫자 카드
+
+/* 숫자카드
+
+5
+6 3 2 10 -10
+8
+10 9 -5 2 3 4 5 -10
+
+*/
+
 import java.io.*;
 import java.util.*;
-public class BinarySearch1 {
-	static int N,M;
+
+public class NumberCard {
+
+	static int N, M;
 	static int[] num1;
+
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -35,38 +46,41 @@ public class BinarySearch1 {
 	}
 	
 	public static int BinarySearch(int num) {
-		int left = 0;
-		int right = N-1;
+		int low = 0;
+		int high = N - 1;
 		
-		while(left <= right) {
-			int middle = (left+right)/2;
-			int middleValue = num1[middle];
+		while (low <= high) {
+			int mid = (low + high) / 2;
+			int middleValue = num1[mid];
 			
-			if(num > middleValue) {
-				left = middle + 1;
+			if(middleValue > num) {
+				high = mid - 1;
 			}
-			else if(num < middleValue) {
-				right = middle - 1;
+			else if(middleValue < num) {
+				low = mid + 1;
 			}
 			else {
 				return 1;
 			}
 		}
+
 		return 0;
-		
 	}
+
+}
+
 //	public static int BinarySearch1(int[] arr, int key) {
 //		int lo = 0; 
 //		int hi = arr.length-1;
 //		
 //		//이진탐색에서는 lo <= hi
 //		while(lo <= hi) {
-//			int mid = (lo+hi)/2;
+//			int mid = (lo + hi) / 2;
 //			
-//			if(key < arr[mid]) {
+//			if(arr[mid] > key) {
 //				hi = mid - 1;
 //			}
-//			else if(key > arr[mid]) {
+//			else if(arr[mid] < key) {
 //				lo = mid + 1;
 //			}
 //			else {
@@ -75,4 +89,4 @@ public class BinarySearch1 {
 //		}
 //		return 0;
 //	}
-}
+
