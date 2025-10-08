@@ -16,7 +16,7 @@ package study.algorithm.binarysearch;
 import java.io.*;
 import java.util.*;
 
-public class NumberCard {
+public class B_NumberCard {
 
 	static int N, M;
 	static int[] num1;

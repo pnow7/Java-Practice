@@ -17,7 +17,7 @@ package study.algorithm.binarysearch;
 import java.io.*;
 import java.util.*;
 
-public class Cutting_LAN {
+public class B_Cutting_LAN {
     
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -31,11 +31,11 @@ public class Cutting_LAN {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
-        System.out.print(lowerBound(arr, N));
+        System.out.print(binarySearch(arr, N));
         br.close();
     }
 
-    static long lowerBound(int[] arr, int N) {
+    static long binarySearch(int[] arr, int N) {
         long low = 1;
         long high = Math.max(arr[arr.length - 1], 1);
         long maxLen = 0;

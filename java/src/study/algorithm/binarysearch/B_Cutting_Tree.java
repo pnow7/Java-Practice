@@ -18,7 +18,7 @@ package study.algorithm.binarysearch;
 
 import java.io.*;
 import java.util.*;
-public class TreeCuts {
+public class B_Cutting_Tree {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
