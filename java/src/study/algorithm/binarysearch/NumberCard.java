@@ -2,10 +2,14 @@ package study.algorithm.binarysearch;
 
 /* 숫자카드
 
+[입력]
 5
 6 3 2 10 -10
 8
 10 9 -5 2 3 4 5 -10
+
+[출력]
+1 0 0 1 1 0 0 1
 
 */
 

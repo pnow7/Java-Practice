@@ -50,7 +50,7 @@ public class NumberCard2 {
         int hi = arr.length;
 
         while (lo < hi) {
-            int mid = lo + (hi - lo) / 2;
+            int mid = (hi + lo) / 2;
             int midValue = arr[mid];
 
             if (midValue >= target) {
@@ -68,7 +68,7 @@ public class NumberCard2 {
         int hi = arr.length;
 
         while (lo < hi) {
-            int mid = lo + (hi - lo) / 2;
+        	int mid = (hi + lo) / 2;
             int midValue = arr[mid];
 
             if (midValue > target) {
