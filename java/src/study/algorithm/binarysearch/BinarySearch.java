@@ -14,9 +14,9 @@ public class BinarySearch {
 
 	요소							설정								이유 (최솟값/인덱스)
 mid 계산						mid = (lo + hi) / 2 (하한)		하한 mid로 충분히 안정적
-while 조건					while (lo < hi)					lo와 hi가 같아지면 루프 종료 (정답이 lo 또는 hi임)
+while 조건						while (lo < hi)					lo와 hi가 같아지면 루프 종료 (정답이 lo 또는 hi임)
 성공 시 (midValue >= Target)	hi = mid						mid가 답이 될 가능성이 있으므로 mid를 포함하여 왼쪽으로 탐색 영역 축소
-실패 시 (midValue < Target)	lo = mid+1						mid는 답이 될 수 없으므로 mid를 제외하고 오른쪽으로 탐색 영역 확대
+실패 시 (midValue < Target)		lo = mid+1						mid는 답이 될 수 없으므로 mid를 제외하고 오른쪽으로 탐색 영역 확대
 
 ------------------------------------------------------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ while 조건					while (lo < hi)					lo와 hi가 같아지면 루프 종료 (정
 
 	요소							설정								이유 (최댓값)
 mid 계산						mid = (lo + hi) / 2 (하한)		하한 mid로 충분히 안정적
-while 조건					while (lo <= hi)				lo와 hi가 같을 때도 한 번 더 검토하여 마지막 후보를 놓치지 않음
+while 조건						while (lo <= hi)				lo와 hi가 같을 때도 한 번 더 검토하여 마지막 후보를 놓치지 않음
 성공 시 (조건 True)				maxH = mid, lo = mid + 1		mid를 답으로 저장하고 mid를 제외하며 더 높은 곳으로 탐색
 실패 시 (조건 False)			hi= mid − 1						mid는 너무 크니 mid를 제외하며 아래로 탐색 영역 축소
 
@@ -37,6 +37,6 @@ mid = (hi + lo) / 2 (고정)
 
 	목표			while 조건		조정 (성공 시)			정답 저장 방식
 최솟값/인덱스		lo < hi			hi = mid			루프 종료 후 lo 반환
-최댓값 (2805)		lo ≤ hi			lo = mid+1			루프 내부에서 maxHeight 갱신 후 반환
+최댓값(2805)		lo ≤ hi			lo = mid+1			루프 내부에서 maxHeight 갱신 후 반환
 
 */
