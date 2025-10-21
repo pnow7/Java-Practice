@@ -1,6 +1,6 @@
 package study.algorithm.bfs_dfs;
 
-public class Dfs_BackTracking {
+public class DFS_BackTracking {
 
 	private static boolean[] visited;
 	private static int[][] graph;

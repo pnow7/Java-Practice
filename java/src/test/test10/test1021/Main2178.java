@@ -1,4 +1,4 @@
-package study.algorithm.bfs_dfs;
+package test.test10.test1021;
 
 /*
 
@@ -19,7 +19,7 @@ package study.algorithm.bfs_dfs;
 import java.io.*;
 import java.util.*;
 
-public class BFS_MiroSearch {
+public class Main2178 {
     
     static int N, M;
     static int[][] miro;
