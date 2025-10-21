@@ -28,7 +28,8 @@ public class DFS_BFS {
     static boolean[] visitedBfs;
     static boolean[] visitedDfs;
     static List<Integer>[] graph;
-
+    static Queue<Integer> q = new ArrayDeque<>();
+    
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -80,7 +81,6 @@ public class DFS_BFS {
     }
 
     static void BFS(int nodeIndex) {
-        Queue<Integer> q = new ArrayDeque<>();
         q.offer(nodeIndex);
         visitedBfs[nodeIndex] = true;
 
