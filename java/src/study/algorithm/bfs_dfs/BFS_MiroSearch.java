@@ -2,7 +2,7 @@ package study.algorithm.bfs_dfs;
 
 import java.util.*;
 
-public class BFS_Practice2 {
+public class BFS_MiroSearch {
     static int N = 5;
     static int M = 6;
 
