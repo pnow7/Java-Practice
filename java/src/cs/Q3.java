@@ -29,6 +29,7 @@ public class Q3 {
     static int num;
 
     public int overLoading(){ return num; }
+    
     public boolean overLoading(int num) { return true; }
     
     public static void main(String[] args) {
