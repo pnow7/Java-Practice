@@ -12,6 +12,7 @@ public class BFS_Practice {
             graph[i] = new ArrayList<>();
         }
 
+        // 순서대로
         graph[1].addAll(Arrays.asList(2, 3, 8));
         graph[2].addAll(Arrays.asList(1, 7));
         graph[3].addAll(Arrays.asList(1, 4, 5));
