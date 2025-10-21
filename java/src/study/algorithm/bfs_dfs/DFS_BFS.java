@@ -1,4 +1,4 @@
-package test.test10.test1021;
+package study.algorithm.bfs_dfs;
 
 /*
 
@@ -21,7 +21,7 @@ package test.test10.test1021;
 import java.io.*;
 import java.util.*;
 
-public class Main1260 {
+public class DFS_BFS {
     
     static int N;
     static int M;
