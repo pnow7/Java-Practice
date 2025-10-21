@@ -4,12 +4,11 @@ package study.stackque;
 import java.util.*;
 public class Stack3 {
 
-    public static void main(String[] args) {
-    	
+    public static void main(String[] args) { 	
         System.out.println(evaluatePostfix("3 4 + 2 *")); // 14
         System.out.println(evaluatePostfix("5 1 2 + 4 * + 3 -")); // 14
-        
     }
+    
 	public static int evaluatePostfix(String expression) {
         Stack<Integer> stack = new Stack<>();
         for (String token : expression.split(" ")) {
