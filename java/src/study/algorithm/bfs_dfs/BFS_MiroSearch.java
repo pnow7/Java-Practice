@@ -50,7 +50,9 @@ public class BFS_MiroSearch {
             String strNum = br.readLine();
             for (int j = 0; j < M; j++) {
                 String charToString = String.valueOf(strNum.charAt(j));
-                miro[i][j] = Integer.parseInt(charToString);
+
+                // miro[i][j] = Character.getNumericValue(strNum.charAt(j)); -> String.valueOf 쓸 필요 없음. 바로 변환
+                miro[i][j] = Integer.parseInt(charToString);  
             }
         }
 
