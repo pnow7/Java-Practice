@@ -1,70 +1,89 @@
 /*
 
+- 미로탐색
+
 [입력]
-1000
+4 6
+101111
+101010
+101011
+111011
 
 [출력]
-517691607
+15
 
 */
 
 import java.io.*;
+import java.util.*;
 
 public class test {
     
+    static int N, M;
+    static int[][] miro;
+    static boolean[][] visited;
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
+
+    static class Node {
+        int x, y;
+        public Node(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int N = Integer.parseInt(br.readLine());
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
 
-        long[][] arr = new long[2][2];
-        arr[0][0] = arr[0][1] = arr[1][0] = 1;
-        arr[1][1] = 0;
+        miro = new int[N][M];
+        visited = new boolean[N][M];
 
-        arr = pow(arr, N);
-
-        System.out.println(arr[0][1]);
-        br.close();
-    }
-
-    static long[][] identityMatrix(long[][] A) {
-        int n = A.length;
-
-        long[][] I = new long[2][2];
-        for (int i = 0; i < n; i++) {
-            I[i][i] = 1;
-        }
-
-        return I;
-    }
-
-    static long[][] multiply(long[][] A, long[][] B) {
-        int n = A.length;
-
-        long[][] result = new long[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                long sum = 0;
-                for (int k = 0; k < n; k++) {
-                    sum += A[i][k] * B[k][j];
-                }
-                result[i][j] = sum % 1000000007;
+        for (int i = 0; i < N; i++) {
+            String strNum = br.readLine();
+            for (int j = 0; j < M; j++) {
+                miro[i][j] = Character.getNumericValue(strNum.charAt(j));
             }
         }
 
-        return result;
+        BFS(0, 0);
+
+        System.out.println(miro[N - 1][M - 1]);
+        br.close();
     }
 
-    static long[][] pow(long[][] base, long exponent) {
-        if (exponent == 0) return identityMatrix(base);
-        if (exponent == 1) return base;
+    static void BFS(int startX, int startY) {
+        Queue<Node> q = new ArrayDeque<>();
+        q.offer(new Node(startX, startY));
+        visited[startX][startY] = true;
 
-        long[][] temp = pow(base, exponent / 2);
+        while (!q.isEmpty()) {
+            Node currentNode = q.poll();
 
-        if (exponent % 2 == 0) {
-            return multiply(temp, temp);
-        } else {
-            return multiply(multiply(temp, temp), base);
+            for (int i = 0; i < 4; i++) {
+                int nextX = currentNode.x + dx[i];
+                int nextY = currentNode.y + dy[i];
+
+                if (nextX < 0 || nextX >= N || nextY < 0 || nextY >= M) {
+                    continue;
+                }
+
+                if (visited[nextX][nextY] == true) {
+                    continue;
+                }
+
+                if (miro[nextX][nextY] == 0) {
+                    continue;
+                }
+
+                q.offer(new Node(nextX, nextY));
+                visited[nextX][nextY] = true;
+                miro[nextX][nextY] = miro[currentNode.x][currentNode.y] + 1;
+            }
         }
     }
 
