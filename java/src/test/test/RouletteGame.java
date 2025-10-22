@@ -80,7 +80,7 @@ public class RouletteGame {
 		
 	}
 	
-	public boolean gameEnd() throws IOException {
+	public boolean gameEnd() {
 			
 		if(remainTry > 0) {
 			System.out.println("충전된 횟수가 있으므로 마감 불가!");
