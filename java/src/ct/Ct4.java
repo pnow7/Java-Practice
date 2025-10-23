@@ -66,7 +66,7 @@ public class Ct4 {
 
 /*
 
-**add는 역순임;**
+**add는 역순**
 
 addFirst는 Top에서 순차적으로 넣고
 
