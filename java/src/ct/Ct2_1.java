@@ -8,10 +8,21 @@ public class Ct2_1 {
     }
 
     static String solution(String str, int start, int end) {
-        String first = str.substring(0, start);
-        String middle = new StringBuilder(str.substring(start, end)).reverse().toString();
-        String last = str.substring(end, str.length());
+        StringBuilder sb = new StringBuilder();
 
-        return first + middle + last;
+        for (int i = 0; i < start; i++) {
+            sb.append(str.charAt(i));
+        }
+
+        for (int i = end - 1; i >= start; i--) {
+            sb.append(str.charAt(i));
+        }
+
+        for (int i = end; i < str.length(); i++) {
+            sb.append(str.charAt(i));
+        }
+
+        return sb.toString();
     }
+    
 }
