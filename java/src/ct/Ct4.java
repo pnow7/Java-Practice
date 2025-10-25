@@ -53,10 +53,8 @@ public class Ct4 {
         while (q.size() > 1) {
             q.pollLast();
 
-            if (q.size() > 0) {
-                int lastCard = q.pollLast();
-                q.addFirst(lastCard);
-            }
+            int lastCard = q.pollLast();
+            q.addFirst(lastCard);
         }
 
         return q.peekFirst();
