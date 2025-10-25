@@ -1,4 +1,4 @@
-package ct.Ct3.practice.employee;
+package ct.Ct3.p_abstract;
 
 public class RegularEmployee extends Employee { 
 

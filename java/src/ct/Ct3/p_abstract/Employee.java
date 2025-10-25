@@ -1,4 +1,4 @@
-package ct.Ct3.practice.employee;
+package ct.Ct3.p_abstract;
 
 public abstract class Employee {
 
