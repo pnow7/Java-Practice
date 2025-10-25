@@ -10,9 +10,9 @@ public class Ct2_3 {
     }
 
     static String solution(String input, int start, int end) {
-        StringBuilder sb = new StringBuilder();
         List<Character> list = new ArrayList<>();
-
+        StringBuilder sb = new StringBuilder();
+        
         for (char c : input.toCharArray()) {
             list.add(c);
         }
