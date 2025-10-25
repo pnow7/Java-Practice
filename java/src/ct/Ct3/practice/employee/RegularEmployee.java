@@ -6,6 +6,7 @@ public class RegularEmployee extends Employee {
         super(name, baseSalary);
     }
 
+    // ContractEmployee.java 같은 함수 (동시 사용)
     @Override
     public int calculateSalary() {
         return baseSalary;

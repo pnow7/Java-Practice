@@ -17,4 +17,5 @@ public class EmployeeTest {
             System.out.println(emp.getName() + "의 최종 급여: " + finalSalary + "원");
         }
     }
+    
 }
