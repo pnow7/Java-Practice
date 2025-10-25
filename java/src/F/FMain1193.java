@@ -1,7 +1,9 @@
 package F;
 
+// 등차수열
+
 import java.io.*;
-//등차수열
+
 public class FMain1193 {
 
 	public static void main(String[] args) throws IOException{
@@ -32,4 +34,5 @@ public class FMain1193 {
 		System.out.println(son + "/" + mom);
 		br.close();
 	}
+	
 }

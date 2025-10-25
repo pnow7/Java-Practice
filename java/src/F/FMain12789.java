@@ -1,6 +1,8 @@
 package F;
 /*
+
 -도키도키 간식드리미
+
 5 4 1 3 2일때
 
 [입력]
@@ -11,6 +13,7 @@ package F;
 Nice
 
 그렇지 않다면 Sad 출력
+
 */
 
 
@@ -35,6 +38,7 @@ public class FMain12789 {
 		bw.flush();
 		bw.close();
 	}
+	
 	public static String isValid(int[] num) {
 		Stack<Integer> stack = new Stack<>();
 		

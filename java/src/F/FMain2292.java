@@ -1,6 +1,7 @@
 package F;
 
 import java.io.*;
+
 public class FMain2292 {
 
 	public static void main(String[] args) throws IOException{

@@ -1,13 +1,17 @@
 package F;
+
 /*
+
 10
 6 3 2 10 10 10 -10 -10 7 3
 8
 10 9 -5 2 3 4 5 -10
+
 */
 
 import java.io.*;
 import java.util.*;
+
 public class FMain10816_1 {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

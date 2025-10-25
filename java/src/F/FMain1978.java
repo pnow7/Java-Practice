@@ -2,6 +2,7 @@ package F;
 
 import java.io.*;
 import java.util.*;
+
 public class FMain1978 {
 
 	public static void main(String[] args) throws IOException{

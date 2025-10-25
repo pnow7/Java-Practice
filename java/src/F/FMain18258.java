@@ -1,6 +1,7 @@
 package F;
 
 /*
+
 Deque<Integer> q = new LinkedList<>();
 
 q.offer();	// push

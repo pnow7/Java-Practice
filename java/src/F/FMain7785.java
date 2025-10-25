@@ -1,8 +1,11 @@
 package F;
-//출퇴근 여부 
-//회사내에 사람 출력
+
+// 출퇴근 여부 
+// 회사내에 사람 출력
+
 import java.io.*;
 import java.util.*;
+
 public class FMain7785 {
 
 	public static void main(String[] args) throws IOException{

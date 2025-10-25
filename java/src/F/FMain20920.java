@@ -1,6 +1,7 @@
 package F;
 
 /*
+
 자주 나오는 단어일수록 앞에 배치한다.
 
 
@@ -63,7 +64,6 @@ attendance
 append
 wallet
 
-
 */
 
 import java.io.*;
@@ -108,6 +108,7 @@ public class FMain20920 {
 		});
 		
 		/*
+		
 		Collections.sort(list, (o1, o2) -> {
 			//내림차순
 			if(Integer.compare(map.get(o2), map.get(o1)) != 0) {
@@ -122,7 +123,9 @@ public class FMain20920 {
 			//오름차순
 			return o1.compareTo(o2);
 		});
+
 		*/
+
 		for(String result : list) {
 			bw.write(result+"\n");
 		}

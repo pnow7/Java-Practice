@@ -1,8 +1,7 @@
 package F;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
+import java.io.*;
+
 public class FMain2941 {
 
 	public static void main(String[] args) throws IOException{
@@ -24,8 +23,7 @@ public class FMain2941 {
 						i++;
 					}
 				}	
-			}
-			else if(ch == 'd') {
+			} else if(ch == 'd') {
 				if(i < s.length()-1) {
 					if(s.charAt(i+1) == 'z') {
 						if(i < s.length()-2) {
@@ -38,29 +36,25 @@ public class FMain2941 {
 						i++;
 					}
 				}
-			}
-			else if(ch == 'l') {
+			} else if(ch == 'l') {
 				if(i < s.length()-1) {
 					if(s.charAt(i+1) == 'j') {
 						i++;
 					}
 				}
-			}
-			else if(ch == 'n') {
+			} else if(ch == 'n') {
 				if(i < s.length()-1) {
 					if(s.charAt(i+1) == 'j') {
 						i++;
 					}
 				}
-			}
-			else if(ch == 's') {
+			} else if(ch == 's') {
 				if(i < s.length()-1) {
 					if(s.charAt(i+1) == '=') {
 						i++;
 					}
 				}
-			}
-			else if(ch == 'z') {
+			} else if(ch == 'z') {
 				if(i < s.length()-1) {
 					if(s.charAt(i+1) == '=') {
 						i++;

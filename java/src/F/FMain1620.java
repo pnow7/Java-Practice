@@ -1,6 +1,8 @@
 package F;
 
-/*첫째 줄에는 도감에 수록되어 있는 
+/*
+
+첫째 줄에는 도감에 수록되어 있는 
 포켓몬의 개수 N이랑
 내가 맞춰야 하는 문제의 개수 M이 주어져. 
 
@@ -68,11 +70,13 @@ Venusaur
 16
 14
 
+// 두개로 map
+
 */
 
 import java.io.*;
 import java.util.*;
-//두개로 map
+
 public class FMain1620 {
 
 	public static void main(String[] args) throws IOException{

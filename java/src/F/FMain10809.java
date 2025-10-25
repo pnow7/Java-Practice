@@ -1,10 +1,10 @@
 package F;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
-//알파벳 포함안되면 -1
-//알파벳이 처음 등장하는 위치를 구분해서 출력
+// 알파벳 포함안되면 -1
+// 알파벳이 처음 등장하는 위치를 구분해서 출력
+
+import java.io.*;
+
 public class FMain10809 { 
 
 	public static void main(String[] args) throws IOException{

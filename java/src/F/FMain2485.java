@@ -1,6 +1,7 @@
 package F;
 
 /*
+
 가로수가 (1, 3, 7, 13)의 위치에 있다면 
 (5, 9, 11)의 위치에 가로수를 더 심으면 모든 가로수들의 간격이 같게 된다. 
 또한, 가로수가 (2, 6, 12, 18)에 있다면 
@@ -37,6 +38,7 @@ package F;
 
 import java.io.*;
 import java.util.*;
+
 public class FMain2485 {
 
 	public static void main(String[] args) throws IOException{
@@ -77,6 +79,7 @@ public class FMain2485 {
 		bw.flush();
 		bw.close();
 	}
+
 	//최대공약수
 	public static int gcd(int a, int b) {
 		while(b != 0) {
@@ -86,16 +89,21 @@ public class FMain2485 {
 		}
 		return a;
 	}
+
 	//최소공배수
 	public static int lcm(int a, int b) {
 		return a*b/gcd(a, b);
 	}
+
 	//선언된 숫자들의 lcm계산
 	public static int findLcmOfList(List<Integer> list) {
 		int result = list.get(0);
+
 		for(int i = 1; i < list.size(); i++) {
 			result = lcm(result, list.get(i));
 		}
+
 		return result;
 	}
+	
 }

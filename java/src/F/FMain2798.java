@@ -5,6 +5,7 @@ package F;
 
 import java.io.*;
 import java.util.*;
+
 public class FMain2798 {
 
 	public static void main(String[] args) throws IOException{
@@ -38,9 +39,7 @@ public class FMain2798 {
 		}
 		
 		System.out.println(result);
-		
 		br.close();
-
 	}
 
 }

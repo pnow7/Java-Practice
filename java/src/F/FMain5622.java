@@ -1,15 +1,16 @@
 package F;
 
-//switch
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
+// switch
+
+import java.io.*;
 public class FMain5622 {
 
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 		String en = br.readLine();
 		int sum = 0;
+
 		for(int i = 0; i < en.length(); i++) {
 			switch(en.charAt(i)) {
 			case 'A': case 'B': case 'C':
@@ -38,9 +39,9 @@ public class FMain5622 {
 				break;
 			}
 		}
+
 		System.out.println(sum);
 		br.close();
-		
 	}
 
 }

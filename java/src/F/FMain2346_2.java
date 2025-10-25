@@ -1,10 +1,12 @@
 package F;
 
 //진짜 모를때 하는 방법(Deque와 배열의 조합을 모를때 두개의 Deque 방법)
+
 import java.io.*;
 import java.util.*;
 
 public class FMain2346_2 {
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -49,4 +51,5 @@ public class FMain2346_2 {
         bw.flush();
         bw.close();
     }
+    
 }

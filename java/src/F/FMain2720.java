@@ -28,8 +28,8 @@ public class FMain2720 {
 			}
 			System.out.println("");
 		}
+		
 		br.close();
-	
 	}
 
 }

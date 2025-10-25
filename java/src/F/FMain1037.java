@@ -1,5 +1,7 @@
 package F;
+
 /*
+
 약수(1과 자기자신 제외한 약수를 입력했을 때 자기자신 값은 무엇일까?)
 
 [입력]
@@ -19,6 +21,7 @@ package F;
  */
 import java.io.*;
 import java.util.*;
+
 public class FMain1037 {
 
 	public static void main(String[] args) throws IOException {

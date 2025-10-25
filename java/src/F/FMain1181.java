@@ -1,7 +1,10 @@
 package F;
-//단어 정렬
+
+// 단어 정렬
+
 import java.io.*;
 import java.util.*;
+
 public class FMain1181 {
 
 	public static void main(String[] args) throws IOException{
@@ -50,6 +53,7 @@ public class FMain1181 {
 	}
 
 }
+
 //13
 //but
 //i

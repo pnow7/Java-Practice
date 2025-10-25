@@ -1,5 +1,7 @@
 package F;
+
 /*
+
 듣보잡
 
 [입력]
@@ -16,9 +18,12 @@ clinton
 2
 baesangwook
 ohhenrie
+
 */
+
 import java.io.*;
 import java.util.*;
+
 public class FMain1764_1 {
 
 	public static void main(String[] args) throws IOException{

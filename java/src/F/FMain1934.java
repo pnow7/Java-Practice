@@ -1,6 +1,7 @@
 package F;
 
 /*
+
 최소공배수
 
 [입력]
@@ -12,9 +13,13 @@ package F;
 [출력]
 45000
 30
-221*/
+221
+
+*/
+
 import java.io.*;
 import java.util.*;
+
 public class FMain1934 {
 
 	public static void main(String[] args) throws IOException{

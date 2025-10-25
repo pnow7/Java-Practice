@@ -1,13 +1,21 @@
 package F;
-//5
-//6 3 2 10 -10
-//8
-//10 9 -5 2 3 4 5 -10
 
-//1 0 0 1 1 0 0 1
+/*
+
+5
+6 3 2 10 -10
+8
+10 9 -5 2 3 4 5 -10
+
+1 0 0 1 1 0 0 1
+
+*/
+
 import java.io.*;
 import java.util.*;
+
 public class FMain10815 {
+
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -44,10 +52,7 @@ public class FMain10815 {
 		
 		br.close();
 		bw.flush();
-		bw.close();
-				
+		bw.close();		
 	}
 	
-	
-
 }

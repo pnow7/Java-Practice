@@ -16,6 +16,7 @@ public class F2_Main3052 {
 		for(int i = 0; i <10; i++) {
 			num[Integer.parseInt(br.readLine())%42] = 1;  
 		}
+		
 		//num배열에 나머지값의 번호들은 1로 저장
 		//같은 나머지 값은 같은 배열이라 어쩌피 1로 저장
 		

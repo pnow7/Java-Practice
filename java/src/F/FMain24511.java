@@ -1,6 +1,9 @@
 package F;
-//queuestack
+
+// queuestack
+
 /*
+
 [입력]
 4
 0 1 1 0
@@ -20,10 +23,12 @@ addLast(2) → q = [4, 1, 2] → pollFirst() → 출력 4
 addLast(4) → q = [1, 2, 4] → pollFirst() → 출력 1
 
 addLast(7) → q = [2, 4, 7] → pollFirst() → 출력 2
+
 */
 
 import java.io.*;
 import java.util.*;
+
 public class FMain24511 {
 
 	public static void main(String[] args) throws IOException{

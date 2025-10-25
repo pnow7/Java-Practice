@@ -1,8 +1,6 @@
 package F;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.StringTokenizer;
 
 public class FMain2908 {
@@ -18,12 +16,11 @@ public class FMain2908 {
 		
 		if(A > B) {
 			System.out.println(A);
-		}
-		else {
+		} else {
 			System.out.println(B);
 		}
+
 		br.close();
-		
 	}
 
 }

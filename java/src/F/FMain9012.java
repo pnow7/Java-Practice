@@ -1,6 +1,7 @@
 package F;
 
 /*
+
 괄호
 
 [입력]
@@ -30,10 +31,14 @@ NO
 NO
 NO
 NO
+
 */
+
 import java.io.*;
 import java.util.*;
+
 public class FMain9012 {
+
 	// 여는 괄호가 있을 때는 스택에 쌓고 닫는 괄호가 있으면 여는 괄호를 하나 지우면(pop) 된다.
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -49,6 +54,7 @@ public class FMain9012 {
 		bw.flush();
 		bw.close();
 	}
+
 	public static String isValid(String s) {
 		Stack<Character> stack = new Stack<>();
 		int length = s.length();
@@ -68,8 +74,7 @@ public class FMain9012 {
 		
 		if(!stack.isEmpty()) {
 			return "NO\n";
-		}
-		else {
+		} else {
 			return "YES\n";
 		}
 	}

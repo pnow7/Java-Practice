@@ -27,6 +27,7 @@ public class FMain2501 {
 				break;
 			}
 		}
+		
 		System.out.println(result);
 		//k보다 커지면 어짜피 result = 0이기 때문에 if(count == K) 실행이 안되고 0값 출력
 	}

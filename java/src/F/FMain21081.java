@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class FMain21081 {
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
@@ -25,7 +26,8 @@ public class FMain21081 {
             if (val < min) min = val;
         }
 
-        Arrays.sort(nums); // 중앙값 구하기 위해 정렬
+        // 중앙값 구하기 위해 정렬
+        Arrays.sort(nums); 
 
         // 최빈값 구하기
         int modeMax = 0;
@@ -50,13 +52,13 @@ public class FMain21081 {
         }
 
         // 결과 출력
-        //산술 평균 double 꼭해야함(7/2 -> 3 이므로 못나눔 double로 해야 3.5가 나와서 가능
+        // 산술 평균 double 꼭해야함(7/2 -> 3 이므로 못나눔 double로 해야 3.5가 나와서 가능
         System.out.println(Math.round((double) sum / N));
-        //중앙값
+        // 중앙값
         System.out.println(nums[N / 2]);
-        //최빈값
+        // 최빈값
         System.out.println(mode);                        
-        //범위
+        // 범위
         System.out.println(max - min);                   
     }
 }

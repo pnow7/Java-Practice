@@ -1,5 +1,7 @@
 package F;
+
 /*
+
 -괄호 짝 이루기(균형잡힌 세상)
 [입력]
 So when I die (the [first] I will see in (heaven) is a score list).
@@ -20,6 +22,7 @@ no
 no
 yes
 yes
+
 */
 
 import java.io.*;
@@ -91,8 +94,7 @@ public class FMain4949 {
 		//.이 있는경우는 stack.isEmpty니까 	
 		if(stack.isEmpty()) {
 			return "yes";
-		}
-		else {
+		} else {
 			return "no";
 		}
 	}

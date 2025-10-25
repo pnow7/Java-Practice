@@ -1,5 +1,7 @@
 package F;
+
 /*
+
 칸토어 집합은 0과 1사이의 실수로 이루어진 집합으로, 
 구간 [0, 1]에서 시작해서 각 구간을 3등분하여 가운데 구간을 반복적으로 제외하는 방식으로 만든다.
 
@@ -21,7 +23,9 @@ package F;
 - -   - -         - -   - -
 
 */
+
 import java.io.*;
+
 public class FMain4779_1 {
 	
 	static int N;
@@ -45,6 +49,7 @@ public class FMain4779_1 {
 		}
 	
 	}
+	
 	static void func(int start, int size) {
 		if(size == 1) return; 
 		

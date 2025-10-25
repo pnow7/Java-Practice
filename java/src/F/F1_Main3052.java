@@ -1,10 +1,6 @@
 package F;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.BufferedWriter;
-import java.io.OutputStreamWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class F1_Main3052 {
 	public static void main(String[] args) throws IOException {
@@ -16,6 +12,7 @@ public class F1_Main3052 {
 		for(int i = 0; i <10; i++) {
 			num[Integer.parseInt(br.readLine())%42] = true; 
 		}
+
 		//입력한 값의 나머지들은 num 배열에 true로 저장
 		//ex) 값이 2이면 num[2] = true
 		

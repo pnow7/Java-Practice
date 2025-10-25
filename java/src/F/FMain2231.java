@@ -3,7 +3,9 @@ package F;
 //216
 //198
 //아니면 0
+
 import java.io.*;
+
 public class FMain2231 {
 
 	public static void main(String[] args) throws IOException{
@@ -35,7 +37,6 @@ public class FMain2231 {
 		
 		br.close();
 	}
-
 
 }
 

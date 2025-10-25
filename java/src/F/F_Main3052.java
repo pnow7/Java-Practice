@@ -1,14 +1,16 @@
 package F;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.BufferedWriter;
-import java.io.OutputStreamWriter;
-import java.io.IOException;
-import java.util.HashSet; //
-//HashSet 함수
-//중복되는 원소를 넣을 경우 하나만 저장(중복원소 허용 x)
-//HashSet은 순서 개념이 없다
+/*
+
+HashSet 함수
+: 중복되는 원소를 넣을 경우 하나만 저장(중복원소 허용 x)
+: HashSet은 순서 개념이 없다
+
+*/
+
+import java.io.*;
+import java.util.*; 
+
 public class F_Main3052 { 
 
 	public static void main(String[] args) throws IOException{

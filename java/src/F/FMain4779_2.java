@@ -1,7 +1,9 @@
 package F;
 
 import java.io.*;
+
 public class FMain4779_2 {
+
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String num;
@@ -16,4 +18,5 @@ public class FMain4779_2 {
         String str = func(n - 1);
         return str + " ".repeat(str.length()) + str;
     }
+
 }

@@ -1,16 +1,18 @@
 package F;
 
-//1번부터 N번 바구니
-//순서를 역순으로
-//역순으로 만들 범위를 정하고
-//그 범위에 들어있는 바구니의 순서를 역순으로
-//가장 왼쪽 바구니부터 출력
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.BufferedWriter;
-import java.io.OutputStreamWriter;
-import java.io.IOException;
-import java.util.StringTokenizer;
+/*
+
+1번부터 N번 바구니
+순서를 역순으로
+역순으로 만들 범위를 정하고
+그 범위에 들어있는 바구니의 순서를 역순으로
+가장 왼쪽 바구니부터 출력
+
+*/
+
+import java.io.*;
+import java.util.*;
+
 public class FMain10811 {
 
 	public static void main(String[] args) throws IOException{
@@ -47,6 +49,7 @@ public class FMain10811 {
 		for(int test_case1 = 0; test_case1 < N; test_case1++) {
 			bw.write(basket[test_case1]+" ");
 		}
+		
 		br.close();
 		bw.flush();
 		bw.close();

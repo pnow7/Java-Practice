@@ -13,22 +13,24 @@ public class FMain2581 {
 		int sum = 0;
 		int count = 0;
 		int result = 0;
+
 		for(int i = M; i <= N; i++) {
 			if(isPrime(i)) {
 				count++;
 				sum += i;
 			}
 		}
+
 		if(count == 0) {
 			System.out.println("-1");
-		}
-		else {
+		} else {
 			for(int j = M; j <= N; j++) {
 				if(isPrime(j)) {
 					result = j;
 					break;
 				}
 			}
+			
 			System.out.println(sum);
 			System.out.println(result);
 		}

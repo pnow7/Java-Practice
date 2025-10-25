@@ -1,5 +1,7 @@
 package F;
+
 /*
+
 재귀적인 패턴으로 별을 찍어 보자. N이 3의 거듭제곱(3, 9, 27, ...)이라고 할 때, 
 크기 N의 패턴은 N×N 정사각형 모양이다.
 
@@ -43,8 +45,11 @@ N이 3보다 클 경우, 크기 N의 패턴은 공백으로 채워진 가운데�
 ***************************
 
 */
+
 import java.io.*;
+
 public class FMain2447 {
+
 	static int N;
 	static char[][] arr;
 	
@@ -71,6 +76,7 @@ public class FMain2447 {
 		bw.flush();
 		bw.close();
 	}
+	
 	//x : 시작행, y : 시작열, N : 블록의 크기, blank : 공백 여부
 	static void star(int x, int y, int N, boolean blank) {
 		if(blank) {
