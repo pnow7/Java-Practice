@@ -37,13 +37,14 @@ public class FMain1764 {
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 	
-		for(int i = 0; i < N; i++) {
+		for (int i = 0; i < N; i++) {
 			map.put(br.readLine(), 1);
 		}
 		
-		for(int i = 0; i < M; i++) {
+		for (int i = 0; i < M; i++) {
 			String name = br.readLine();
 			map.put(name, map.getOrDefault(name, 0)+1);
+			
 			if(map.get(name) == 2) {
 				list.add(name);
 			}

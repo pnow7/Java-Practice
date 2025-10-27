@@ -37,13 +37,13 @@ public class FMain1764_1 {
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		
-		for(int i = 0; i < N; i++) {
+		for (int i = 0; i < N; i++) {
 			set.add(br.readLine());
 		}
 		
-		for(int i = 0; i < M; i++) {
+		for (int i = 0; i < M; i++) {
 			String name = br.readLine();
-			if(set.contains(name)) {
+			if (set.contains(name)) {
 				list.add(name);
 			}
 		}

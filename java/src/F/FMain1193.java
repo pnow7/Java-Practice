@@ -13,7 +13,7 @@ public class FMain1193 {
 		int line = 0;
 		int sum = 0;
 		
-		while(sum < n) { //라인찾기 
+		while (sum < n) { //라인찾기 
 			line++;
 			sum += line; //0부터 n까지 더하기
 		}
@@ -22,11 +22,10 @@ public class FMain1193 {
 		
 		int son, mom;
 		
-		if(line % 2 == 0) {
+		if (line % 2 == 0) {
 			son = indexLine;
 			mom = line - indexLine + 1;
-		}
-		else {
+		} else {
 			son = line - indexLine+1;
 			mom = indexLine;
 		}
@@ -34,5 +33,5 @@ public class FMain1193 {
 		System.out.println(son + "/" + mom);
 		br.close();
 	}
-	
+
 }

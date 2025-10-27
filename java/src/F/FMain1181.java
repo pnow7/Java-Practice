@@ -2,6 +2,38 @@ package F;
 
 // 단어 정렬
 
+/*
+
+[입력]
+13
+but
+i
+wont
+hesitate
+no
+more
+no
+more
+it
+cannot
+wait
+im
+yours
+
+[출력]
+i
+im
+it
+no
+but
+more
+wait
+wont
+yours
+cannot
+hesitate
+
+*/
 import java.io.*;
 import java.util.*;
 
@@ -18,13 +50,13 @@ public class FMain1181 {
 			str[i] = br.readLine();
 		}
 		
-
+		//s1과 s2를 오름차순 정렬 (비교대상은 s1과 s2의 단어길이)
 		Arrays.sort(str, (s1,s2) ->{
 			if(s1.length() == s2.length()) {
 				return s1.compareTo(s2); 
 			}
 			else {
-				return s1.length()-s2.length(); //s1과 s2를 오름차순 정렬 (비교대상은 s1과 s2의 단어길이)
+				return s1.length()-s2.length(); 
 			}
 		});
 
@@ -53,31 +85,3 @@ public class FMain1181 {
 	}
 
 }
-
-//13
-//but
-//i
-//wont
-//hesitate
-//no
-//more
-//no
-//more
-//it
-//cannot
-//wait
-//im
-//yours
-
-
-//i
-//im
-//it
-//no
-//but
-//more
-//wait
-//wont
-//yours
-//cannot
-//hesitate
