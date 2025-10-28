@@ -1,4 +1,4 @@
-package study.heap;
+package study.algorithm.heep;
 
 /*
 
@@ -39,7 +39,7 @@ package study.heap;
 import java.io.*;
 import java.util.*;
 
-public class Main11279 {
+public class MaxHeep {
     
     public static void main(String[] args) throws IOException {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
