@@ -42,8 +42,8 @@ import java.util.*;
 public class Main11279 {
     
     public static void main(String[] args) throws IOException {
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
         StringBuilder sb = new StringBuilder();
 
         int N = Integer.parseInt(br.readLine());
