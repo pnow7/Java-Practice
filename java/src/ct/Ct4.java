@@ -22,6 +22,9 @@ public class Ct4 {
 
         System.out.println(solution1(4));
         System.out.println(solution1(11));
+        
+        System.out.println(solution2(4));
+        System.out.println(solution2(11));
     }
 
     static int solution(int n) {
@@ -58,6 +61,25 @@ public class Ct4 {
         }
 
         return q.peekFirst();
+    }
+    
+    static int solution2(int n) {
+    	List<Integer> list = new LinkedList<>();
+    	
+    	for (int i = 1; i <= n; i++) {
+    		list.add(i);
+    	}
+    	
+    	while (list.size() > 1) {
+    		list.remove(0);
+    		
+    		if (list.size() > 0) {
+    			int topCard = list.remove(0);
+    			list.add(topCard);
+    		}
+    	}
+    	
+    	return list.get(0);
     }
 
 }
