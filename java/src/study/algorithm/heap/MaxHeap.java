@@ -49,7 +49,7 @@ public class MaxHeap {
         int N = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < N; i++) {
-            int num = Integer.parseInt(br.readLine());
+            int num =Integer.parseInt(br.readLine());
 
             if (num == 0) {
                 if (maxHeap.isEmpty()) {

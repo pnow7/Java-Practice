@@ -1,4 +1,4 @@
-package test.test11.test1117;
+package study.algorithm.heap;
 
 /*
 - 중앙값 구하기
@@ -39,7 +39,7 @@ package test.test11.test1117;
 import java.io.*;
 import java.util.*;
 
-public class Main2696 {
+public class MiddleValue {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

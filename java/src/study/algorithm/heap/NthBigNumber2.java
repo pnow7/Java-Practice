@@ -1,4 +1,4 @@
-package study.heap;
+package study.algorithm.heap;
 
 /*
 - N번째 큰 수
