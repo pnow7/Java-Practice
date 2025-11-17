@@ -59,6 +59,7 @@ public class MiddleValue {
 			StringTokenizer st = null;
 			
 			for (int i = 0; i < M; i++) {
+				// 10개 입력 마다 매 줄 반영  
 				if (i % 10 == 0) {
 					st = new StringTokenizer(br.readLine());
 				}
@@ -71,12 +72,14 @@ public class MiddleValue {
 					minHeap.add(num);
 				}
 				
+				// 균형 맞추기
 				if (maxHeap.size() < minHeap.size()) {
 					maxHeap.add(minHeap.poll());
 				} else if (maxHeap.size() > minHeap.size() + 1) {
 					minHeap.add(maxHeap.poll());
 				}
 				
+				// 홀수 번째 입력 시 출력
 				if ((i + 1) % 2 != 0) {
 					sb.append(maxHeap.peek()).append(" ");
 					outputCount++;
