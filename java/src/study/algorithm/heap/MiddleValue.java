@@ -66,6 +66,7 @@ public class MiddleValue {
 				
 				int num = Integer.parseInt(st.nextToken());
 				
+    // 작은 숫자들의 최대 힙, 큰 숫자들의 최소 힙
 				if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
 					maxHeap.add(num);
 				} else {
