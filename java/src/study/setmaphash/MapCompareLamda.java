@@ -3,7 +3,6 @@ package study.setmaphash;
 /*
 자주 나오는 단어일수록 앞에 배치한다.
 
-
 해당 단어의 길이가 길수록 앞에 배치한다.
 알파벳 사전 순으로 앞에 있는 단어일수록 앞에 배치한다
 
@@ -16,7 +15,6 @@ N+1번째 줄까지 외울 단어를 입력받는다.
 이때의 입력은 알파벳 소문자로만 주어지며 단어의 길이는 10을 넘지 않는다.
 
 단어장에 단어가 반드시 1개 이상 존재하는 입력만 주어진다.
-
 
 빈도수 내림차순
 
@@ -81,7 +79,7 @@ public class MapCompareLamda {
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		
-		for(int i = 0; i < N; i++) {
+		for (int i = 0; i < N; i++) {
 			String s = br.readLine();
 			//단어의 길이가 M 미만인 단어는 제외
 			if(s.length() < M) continue;
@@ -123,7 +121,7 @@ public class MapCompareLamda {
 			return o1.compareTo(o2);
 		});
 		*/
-		for(String result : list) {
+		for (String result : list) {
 			bw.write(result+"\n");
 		}
 		

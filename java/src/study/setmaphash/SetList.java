@@ -7,12 +7,12 @@ public class SetList {
 		Random rand = new Random();
 		Set<Integer> numChk = new HashSet<>();
 		
-		while(numChk.size() < 6) {
+		while (numChk.size() < 6) {
 			int lotto = rand.nextInt(45)+1;
 			numChk.add(lotto);
 		}
 		
-		for(int result1 : numChk) {
+		for (int result1 : numChk) {
 			System.out.print(result1 +" ");
 		}
 		System.out.println("");
