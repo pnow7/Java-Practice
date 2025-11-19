@@ -17,35 +17,35 @@ package test.test11.test1119;
 100 100
 11
 
+3 2
+1 65
+5 23
+2 99
+10
+2
+
 [출력]
 10
+
+164
 
 */
 
 import java.io.*;
 import java.util.*;
 
-class Jewel implements Comparable<Jewel> {
+class Jewels {
 	int weight;
 	int value;
 	
-	public Jewel(int weight, int value) {
+	public Jewels(int weight, int value) {
 		this.weight = weight;
 		this.value = value;
 	}
-	
-	@Override
-	public int compareTo(Jewel other) {
-		if (this.weight == other.weight) {
-			return other.value - this.value;
-		}
-		
-		return this.weight - other.weight;
-	}
 }
 
-public class Main1202 {
-			
+public class Main1202_2 {
+	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = null;
@@ -54,15 +54,21 @@ public class Main1202 {
 		int N = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
 		
-		Jewel[] jewels = new Jewel[N];
+		Jewels[] jewels = new Jewels[N];
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
 			int M = Integer.parseInt(st.nextToken());
 			int V = Integer.parseInt(st.nextToken());
-			jewels[i] = new Jewel(M, V);
+			jewels[i] = new Jewels(M, V);
 		}
 		
-		Arrays.sort(jewels);
+		Arrays.sort(jewels, (j1, j2) -> {
+			if (j1.weight == j2.weight) {
+				return j2.value - j1.value;
+			}
+			
+			return j1.weight - j2.weight;
+		});
 		
 		int[] bags = new int[K];
 		for (int i = 0; i < K; i++) {
