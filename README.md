@@ -2,6 +2,8 @@
 📂 이 레포지토리는 **Java로 작성된 알고리즘 코드**와  
 💻 **Baekjoon Online Judge(BOJ) 문제 풀이 및 자바 공부**를 정리한 공간입니다.
 
+<a href="https://solved.ac/guswo4324/"><img style="height:170px;" src="http://mazassumnida.wtf/api/v2/generate_badge?boj=guswo4324" /></a> -->
+  
 ---
 
 ## 📌 Repository
