@@ -11,6 +11,7 @@
 - 알고리즘 문제 풀이 과정을 기록하고, 코드와 아이디어를 함께 정리
 - 주로 **Baekjoon Online Judge(BOJ)** 문제를 중심으로 연습
 
+<!--
 ---
 
 ## 📏 Coding Style Guide
@@ -21,3 +22,4 @@
 
 - 공식 문서: https://google.github.io/styleguide/javaguide.html  
 - 한글 번역 참고 자료: https://github.com/JunHoPark93/google-java-styleguide  
+-->
