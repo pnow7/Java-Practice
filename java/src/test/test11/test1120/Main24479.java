@@ -1,0 +1,85 @@
+package test.test11.test1120;
+
+/*
+- 깊이 우선 탐색 1
+
+[입력]
+5 5 1
+1 4
+1 2
+2 3
+2 4
+3 4
+
+[출력]
+1
+2
+3
+4
+0
+
+*/
+
+import java.io.*;
+import java.util.*;
+
+public class Main24479 {
+	
+	static List<Integer>[] graph;
+	static boolean[] visit;
+	static int[] order;
+	static int count = 1;
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		int M = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(st.nextToken());
+		int R = Integer.parseInt(st.nextToken());
+		
+		graph = new ArrayList[N + 1];
+		visit = new boolean[N + 1];
+		order = new int[N + 1];
+
+		for (int i = 1; i <= N; i++) {
+			graph[i] = new ArrayList<>();
+		}
+		
+		for (int i = 0; i < M; i++ ) {
+			st = new StringTokenizer(br.readLine());
+			int u = Integer.parseInt(st.nextToken());
+			int v = Integer.parseInt(st.nextToken());
+			
+			graph[u].add(v);
+			graph[v].add(u);
+		}
+		
+		for (int i = 1; i <= N; i++) {
+			Collections.sort(graph[i]);
+		}
+		
+		DFS(R);
+		
+		for (int i = 1; i <= N; i++) {
+			sb.append(order[i]).append("\n");
+		}
+		
+		System.out.println(sb.toString());
+		br.close();
+	}
+	
+	static void DFS(int startNode) {
+		visit[startNode] = true;
+		order[startNode] = count;
+		
+		for (int nextNode : graph[startNode]) {
+			if (!visit[nextNode]) {
+				count++;
+				DFS(nextNode);
+			}
+		}
+	}
+	
+}
