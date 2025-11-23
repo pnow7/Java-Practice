@@ -1,4 +1,4 @@
-package study.algorithm.bfs_dfs;
+package study.algorithm.bfs_dfs.bfs;
 
 /*
 
