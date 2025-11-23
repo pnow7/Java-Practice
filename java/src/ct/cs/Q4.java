@@ -1,4 +1,4 @@
-package cs;
+package ct.cs;
 
 public class Q4 {
     /*
