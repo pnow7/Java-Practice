@@ -1,38 +1,84 @@
 package study.algorithm.bfs_dfs.dfs;
 
-public class DFS1 {
-	//방문처리에 사용 할 배열선언
-	static boolean[] visited = new boolean[9];
-	static int[][] tree = {
-			{}, 		
-			{2,3,8}, 	// 1
-			{1,6,8},
-			{1,5},		// 3
-			{5,7}, 			
-			{3,4,7},	// 5번째 인덱스
-			{2},
-			{4,5},		// 7번째 인덱스
-			{1,2}
-	};
+/*
+- 깊이 우선 탐색 1
 
-	public static void main(String[] args) {
-		dfs(7); //정수 부터 시작
+정점번호를 오름차순
+
+[입력]
+5 5 1
+1 4
+1 2
+2 3
+2 4
+3 4
+
+[출력]
+1
+2
+3
+4
+0
+
+*/
+
+import java.io.*;
+import java.util.*;
+
+public class DFS1 {
+	
+	static List<Integer>[] graph;
+	static int[] order;
+	static int count = 1;
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		int M = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(st.nextToken());
+		int R = Integer.parseInt(st.nextToken());
+		
+		graph = new ArrayList[N + 1];
+		order = new int[N + 1];
+
+		for (int i = 1; i <= N; i++) {
+			graph[i] = new ArrayList<>();
+		}
+		
+		for (int i = 0; i < M; i++ ) {
+			st = new StringTokenizer(br.readLine());
+			int u = Integer.parseInt(st.nextToken());
+			int v = Integer.parseInt(st.nextToken());
+			
+			graph[u].add(v);
+			graph[v].add(u);
+		}
+		
+		for (int i = 1; i <= N; i++) {
+			Collections.sort(graph[i]);
+		}
+		
+		DFS(R);
+		
+		for (int i = 1; i <= N; i++) {
+			sb.append(order[i]).append("\n");
+		}
+		
+		System.out.println(sb.toString());
+		br.close();
 	}
 	
-	static void dfs(int nodeIndex) {
-		//방문처리
-		visited[nodeIndex] = true; 
+	static void DFS(int startNode) {
+		order[startNode] = count;
 		
-		//방문 노드 출력
-		System.out.print(nodeIndex+" -> ");
-
-		//방문한 노드에 인접한 노드 찾기
-		for(int node : tree[nodeIndex]) {
-			//인접한 노드가 방문한 적이 없다면 DFS수행
-			if(!visited[node]) {
-				dfs(node);
+		for (int nextNode : graph[startNode]) {
+			if (order[nextNode] == 0) {
+				count++;
+				DFS(nextNode);
 			}
 		}
 	}
-
+	
 }
