@@ -17,7 +17,7 @@
 import java.io.*;
 import java.util.*;
 
-public class test {
+public class TestMiroBfs {
     
     static int N, M;
     static int[][] miro;

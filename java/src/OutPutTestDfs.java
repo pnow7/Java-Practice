@@ -22,7 +22,7 @@ import java.util.Arrays;
 import java.io.*;
 import java.util.*;
 
-public class OutTest {
+public class OutPutTestDfs {
 
     static int N, M;
     static List<Integer>[] coms;
