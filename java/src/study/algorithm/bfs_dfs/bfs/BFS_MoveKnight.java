@@ -81,7 +81,7 @@ public class BFS_MoveKnight {
         br.close();
     }
     
-    static void bfs(Knight start, Knight end) {
+    private static void bfs(Knight start, Knight end) {
         Queue<Knight> q = new ArrayDeque<>();
 
         visited[start.x][start.y] = true;
