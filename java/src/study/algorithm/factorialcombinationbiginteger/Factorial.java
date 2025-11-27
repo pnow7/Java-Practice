@@ -1,7 +1,6 @@
-package study.algorithm.recursive_function;
+package study.algorithm.factorialcombinationbiginteger;
 
 /*
-
 팩토리얼
 
 */

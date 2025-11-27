@@ -1,4 +1,4 @@
-package study.algorithm.recursive_function;
+package study.algorithm.recursive;
 
 /*
 세 개의 장대가 있고 첫 번째 장대에는 반경이 서로 다른 n개의 원판이 쌓여 있다. 

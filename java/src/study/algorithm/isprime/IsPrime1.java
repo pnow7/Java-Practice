@@ -1,4 +1,4 @@
-package study.algorithm.isPrime;
+package study.algorithm.isprime;
 
 public class IsPrime1 {
 

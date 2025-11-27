@@ -1,4 +1,4 @@
-package study.algorithm.isPrime;
+package study.algorithm.isprime;
 
 //골드바흐의 추측
 /*

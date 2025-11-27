@@ -1,4 +1,4 @@
-package study.algorithm.recursive_function;
+package study.algorithm.recursive;
 
 /*
 

@@ -1,4 +1,4 @@
-package study.algorithm.factorial_combination_biginteger;
+package study.algorithm.factorialcombinationbiginteger;
 
 public class IntInteger {
 

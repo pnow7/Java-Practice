@@ -1,4 +1,4 @@
-package study.algorithm.divide_conquer;
+package study.algorithm.divideconquer;
 
 /*
 
