@@ -1,4 +1,4 @@
-package study.algorithm;
+package study.algorithm.math;
 
 import java.io.*;
 import java.util.*;

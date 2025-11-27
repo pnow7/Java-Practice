@@ -1,6 +1,12 @@
-package study.algorithm.section_sum;
+package study.algorithm.prefixsum;
 
 /*
+- 구간 합 구하기
+
+문제는 말그대로 주어진 구간에 해당하는 값들을 누적합 하는 문제이다.
+첫번째 줄에는 수의 개수(N)와 합을 구해야하는 횟수(M)가 주어진다.
+두번째 줄에는 수의 개수(N)만큼 숫자를 입력 받고, 
+세번째 줄부터는 수가 아닌 구간을 입력받아 해당되는 구간의 수를 누적합하면 되는 문제이다.
 
 [입력]
 5 3
@@ -19,7 +25,7 @@ package study.algorithm.section_sum;
 import java.io.*;
 import java.util.*;
 
-public class Main11659 {
+public class SectionSum {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

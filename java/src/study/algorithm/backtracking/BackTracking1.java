@@ -1,4 +1,4 @@
-package study.algorithm.backTracking;
+package study.algorithm.backtracking;
 
 /*
  

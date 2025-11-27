@@ -1,4 +1,4 @@
-package study.algorithm.factorialcombinationbiginteger;
+package study.algorithm.factorial;
 /*
 다리놓기
 

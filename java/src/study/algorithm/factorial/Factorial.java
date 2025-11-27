@@ -1,4 +1,4 @@
-package study.algorithm.factorialcombinationbiginteger;
+package study.algorithm.factorial;
 
 /*
 팩토리얼
