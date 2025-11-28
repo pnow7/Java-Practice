@@ -53,7 +53,7 @@ public class Main7569 {
 	private static class TomatoBox {
 		int x, y, z, day;
 		
-		TomatoBox (int x, int y, int z, int day) {
+		TomatoBox(int x, int y, int z, int day) {
 			this.x = x;
 			this.y = y;
 			this.z = z;

@@ -66,7 +66,7 @@ public class Main16928 {
 		int position;
 		int depth; // 주사위를 몇 번 굴렸는지
 		
-		Node (int position, int depth) {
+		Node(int position, int depth) {
 			this.position = position;
 			this.depth = depth;
 		}
