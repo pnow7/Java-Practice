@@ -78,33 +78,34 @@ public class BFS_BreakTheWallAndMove {
 	private static int bfs() {
 		Queue<Node> q = new ArrayDeque<>();
 		
+		// q.offer(new int[]{0, 0, 1, 0});
 		q.offer(new Node(0, 0, 1, 0));
 		visited[0][0][0] = true;
 		
 		while (!q.isEmpty()) {
-			Node current = q.poll();
+			Node cur = q.poll();
 			
-			if (current.x == n - 1 && current.y == m -1) return current.dist;
+			if (cur.x == n - 1 && cur.y == m -1) return cur.dist;
 			
 			for (int i = 0; i < 4; i++) {
-				int nx = current.x + DX[i];
-				int ny = current.y + DY[i];
+				int nx = cur.x + DX[i];
+				int ny = cur.y + DY[i];
 				
 				// if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue; 
 				// if (0 <= nx && nx < n && 0 <= ny && ny < m) 중괄호 쓰기 싫으면 위에 코드
 				
 				if (0 <= nx && nx < n && 0 <= ny && ny < m) {
 					// 다른 칸 벽 && 아직 부셔지지 않음
-					if (map[nx][ny] == 1 && current.broken == 0) {
+					if (map[nx][ny] == 1 && cur.broken == 0) {
 						if (visited[nx][ny][1] == false) {
 							visited[nx][ny][1] = true;
-							q.offer(new Node(nx, ny, current.dist + 1, 1));
+							q.offer(new Node(nx, ny, cur.dist + 1, 1));
 						}
 					// 다음 칸이 빈칸
 					} else if (map[nx][ny] == 0) {
-						if (visited[nx][ny][current.broken] == false) {
-							visited[nx][ny][current.broken] = true;
-							q.offer(new Node(nx, ny, current.dist + 1, current.broken));
+						if (visited[nx][ny][cur.broken] == false) {
+							visited[nx][ny][cur.broken] = true;
+							q.offer(new Node(nx, ny, cur.dist + 1, cur.broken));
 						}
 					}
 				}
