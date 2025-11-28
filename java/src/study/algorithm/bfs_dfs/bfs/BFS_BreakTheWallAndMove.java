@@ -1,4 +1,4 @@
-package test.test11.test1128;
+package study.algorithm.bfs_dfs.bfs;
 
 /*
 - 벽 부수고 이동하기
@@ -32,7 +32,7 @@ N x M 행렬로 표현되는 맵이 있음
 import java.io.*;
 import java.util.*;
 
-public class Main2206 {
+public class BFS_BreakTheWallAndMove {
 
 	private static final int[] DX = {-1, 1, 0, 0};
 	private static final int[] DY = {0, 0, -1, 1};
