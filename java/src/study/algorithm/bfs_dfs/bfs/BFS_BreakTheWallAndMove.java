@@ -37,6 +37,7 @@ public class BFS_BreakTheWallAndMove {
 	private static final int[] DX = {-1, 1, 0, 0};
 	private static final int[] DY = {0, 0, -1, 1};
 	
+	// visited도 2차원 배열로 2개로 만드는게 더 빠름, 3차원 시 누수 발생할 수 있어서 2차원 보다 느림
 	private static int[][] map;
 	private static boolean[][][] visited;
 	private static int n, m;
