@@ -23,6 +23,7 @@ N과 K가 주어지면 (N, K)-요세푸스 순열을 구하는 프로그램을 �
 
 [출력]
 <3, 6, 2, 7, 5, 1, 4>
+
 */
 
 import java.io.*;
@@ -40,7 +41,7 @@ public class Josephus {
 		int N = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
 
-		//1,2 뒤로 보내고 3빼고 , 4, 5 뒤로 보내고 6 빼고 
+		//1, 2 뒤로 보내고 3빼고, 4, 5 뒤로 보내고 6 빼고 
 		for(int i = 1; i <= N; i++) {
 			q.offer(i);
 		}
