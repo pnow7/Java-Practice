@@ -34,6 +34,7 @@ public class Student {
 		return studentNum.hashCode();
 	}
 }
+
 //@Override
 //public boolean equals(Object obj) {
 //	if(obj instanceof Student) {
