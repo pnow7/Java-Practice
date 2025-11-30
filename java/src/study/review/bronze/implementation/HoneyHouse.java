@@ -1,4 +1,4 @@
-package study.review.bronze;
+package study.review.bronze.implementation;
 
 /*
 - 벌집

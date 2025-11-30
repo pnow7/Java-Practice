@@ -1,4 +1,4 @@
-package study.review.bronze;
+package study.review.bronze.string;
 
 /*
 - 상수

@@ -1,4 +1,4 @@
-package study.review.bronze;
+package study.review.bronze.implementation;
 
 /*
 - 블랙잭

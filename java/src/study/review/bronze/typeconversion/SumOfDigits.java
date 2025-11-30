@@ -1,4 +1,4 @@
-package study.review.bronze;
+package study.review.bronze.typeconversion;
 
 /*
 - 분해합
@@ -23,38 +23,34 @@ package study.review.bronze;
 
 import java.io.*;
 
-public class SumOfDigits2 {
+public class SumOfDigits {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int n = Integer.parseInt(br.readLine());
 		
-		int result = 0;
-		int length = String.valueOf(n).length();
-		
-		// 입력한 n 값에 대한 자리수에 9를 곱하여 최소값 설정을 해줌. 
-		// (216은 3자리 수니까 자리수에 9를 곱함 -> 216 - 27 = 189 -> 189 부터 시작하여 만족하는 생성자 수를 찾음) 
-		int start = n - (length * 9);
-		
-		if (start < 1) start = 1;
-		
-		for (int i = start; i < n; i++) {
+		int count = 0;
+		for (int i = 1; i <= n; i++) {
 			int sum = i;
-			int temp = i;
 			
-			while (temp != 0) {
-				sum += temp % 10;
-				temp /= 10;
+			String str = String.valueOf(i);
+			
+			for (int j = 0; j < str.length(); j++) {
+				sum += str.charAt(j) - '0';
 			}
 			
 			if (sum == n) {
-				result = i;
+				System.out.println(i);
+				count++;
 				break;
 			}
 		}
 		
-		System.out.println(result);
+		if (count == 0) {
+			System.out.println(count);
+		}
+		
 		br.close();
 	}
 	
