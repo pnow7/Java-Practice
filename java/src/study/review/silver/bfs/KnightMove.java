@@ -1,4 +1,4 @@
-package study.review.silver;
+package study.review.silver.bfs;
 
 /*
 - 나이트의 이동
