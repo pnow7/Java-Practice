@@ -15,6 +15,7 @@ public class SetList {
 		for (int result1 : numChk) {
 			System.out.print(result1 +" ");
 		}
+		
 		System.out.println("");
 		
 		//리스트로 만들기

@@ -11,9 +11,9 @@ public class Map1 {
 		int N = Integer.parseInt(br.readLine());
 		int[] num = new int[N];
 		int[] chk = new int[N];
-		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		for(int i = 0; i < N; i++) {
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		for (int i = 0; i < N; i++) {
 			num[i] = chk[i] = Integer.parseInt(st.nextToken());
 		}
 		
@@ -21,15 +21,17 @@ public class Map1 {
 		
 		Map<Integer, Integer> map = new HashMap<>();
 		int idx = 0;
-		for(int i = 0; i < N; i++) {
+		
+		for (int i = 0; i < N; i++) {
 			if(!map.containsKey(chk[i])) {
 				map.put(chk[i], idx++);
 			}
 		}
 		
-		for(int i = 0; i < N; i++) {
+		for (int i = 0; i < N; i++) {
 			bw.write(map.get(num[i]) + " ");
 		}
+		
 		br.close();
 		bw.flush();
 		bw.close();

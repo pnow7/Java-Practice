@@ -82,7 +82,8 @@ public class MapCompareLamda {
 		for (int i = 0; i < N; i++) {
 			String s = br.readLine();
 			//단어의 길이가 M 미만인 단어는 제외
-			if(s.length() < M) continue;
+			if (s.length() < M) continue;
+			
 			map.put(s, map.getOrDefault(s, 0)+1);
 		}
 		
@@ -121,6 +122,7 @@ public class MapCompareLamda {
 			return o1.compareTo(o2);
 		});
 		*/
+		
 		for (String result : list) {
 			bw.write(result+"\n");
 		}
