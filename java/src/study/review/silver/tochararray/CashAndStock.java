@@ -1,4 +1,4 @@
-package test.test12.test1202;
+package study.review.silver.tochararray;
 
 /*
 - 기적의 매매법
@@ -137,7 +137,7 @@ class Timing {
 	
 }
 
-public class Main20546 {
+public class CashAndStock {
 	
 	private static int[] price = new int[14];
 	
