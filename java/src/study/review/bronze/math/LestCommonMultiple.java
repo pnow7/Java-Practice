@@ -46,7 +46,7 @@ public class LestCommonMultiple {
 		br.close();
 	}
 	
-	// 유클리드 호제법
+	// 최대공약수 (유클리드 호제법)
 	private static int gcd(int a, int b) {
 		if (b == 0) {
 			return a;
