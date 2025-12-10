@@ -1,6 +1,7 @@
 package study.lambda;
 
-/* 단어 정렬
+/* 
+- 단어 정렬
 
 [입력]
 13
@@ -58,16 +59,20 @@ public class Words_Sort {
 			}
 		});
 
-//		Arrays.sort(str, new Comparator<String>() {
-//			public int compare(String s1, String s2) {
-//				if(s1.length() == s2.length()) {
-//					return s1.compareTo(s2); //사전순
-//				}
-//				else {
-//					return s1.length() - s2.length(); //길이가 짧은거부터 긴쪽으로 오름차순
-//				}
-//			}
-//		});
+		/*
+		
+		Arrays.sort(str, new Comparator<String>() {
+			public int compare(String s1, String s2) {
+				if(s1.length() == s2.length()) {
+					return s1.compareTo(s2); //사전순
+				}
+				else {
+					return s1.length() - s2.length(); //길이가 짧은거부터 긴쪽으로 오름차순
+				}
+			}
+		});
+		
+		*/
 		bw.write(str[0]+"\n");
 		
 		for(int i = 1; i < N; i++) {

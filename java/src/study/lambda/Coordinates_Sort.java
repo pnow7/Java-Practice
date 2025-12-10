@@ -1,6 +1,7 @@
 package study.lambda;
 
-/* 좌표정렬
+/* 
+- 좌표정렬
 
 [입력]
 5
@@ -39,8 +40,8 @@ public class Coordinates_Sort {
 			xy[i][1] = Integer.parseInt(st.nextToken());			
 		}
 		
-		//x좌표 같으면 y좌표 오름차순
-		//x좌표 같지않으면 x좌표 오름차순
+		// x좌표 같으면 y좌표 오름차순
+		// x좌표 같지않으면 x좌표 오름차순
 		Arrays.sort(xy, (e1, e2) -> {
 			if(e1[0] == e2[0]) {
 				return e1[1] - e2[1];
@@ -53,6 +54,7 @@ public class Coordinates_Sort {
 		for(int i = 0; i < N; i++) {
 			bw.write(xy[i][0] + " " + xy[i][1]+"\n");
 		}
+		
 		br.close();
 		bw.flush();
 		bw.close();
