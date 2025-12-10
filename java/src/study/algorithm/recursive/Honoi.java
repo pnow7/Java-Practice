@@ -1,6 +1,7 @@
 package study.algorithm.recursive;
 
 /*
+ * 
 세 개의 장대가 있고 첫 번째 장대에는 반경이 서로 다른 n개의 원판이 쌓여 있다. 
 각 원판은 반경이 큰 순서대로 쌓여있다. 
 이제 수도승들이 다음 규칙에 따라 첫 번째 장대에서 세 번째 장대로 옮기려 한다.
@@ -23,13 +24,11 @@ package study.algorithm.recursive;
 2 3
 1 3
 
-*/
-
-/*
 N : 원판의 개수
 start : 출발지
 mid : 옮기기 위해 이동해야 장소
 end : 목적지
+
 */
 
 import java.io.*;
@@ -51,19 +50,20 @@ public class Honoi {
 	}
 	
 	static void Honoi(int N, int start, int mid, int end) {
-		if(N == 1) {
+		if (N == 1) {
 			sb.append(start + " " + end + "\n");
 			return;
 		}
+		
 		// start -> end로 옮긴다고 가정할 떄,
 		
-		//N-1개를 start에서 mid로 이동 (= start 지점의 N-1개의 원판을 mid 지점으로 옮긴다.)
+		// N-1개를 start에서 mid로 이동 (= start 지점의 N-1개의 원판을 mid 지점으로 옮긴다.)
 		Honoi(N-1, start, end, mid);
 		
-		//1개를 start에서 end로 이동(= start 지점의 N번재 원판을 to 점으로 옮긴다.)
+		// 1개를 start에서 end로 이동(= start 지점의 N번재 원판을 to 점으로 옮긴다.)
 		sb.append(start + " " + end + "\n");
 		
-		//N-1개를 mid에서 end로 이동(= mid 지점의 N-1개의 원판을 to 지점으로 옮긴다.)
+		// N-1개를 mid에서 end로 이동(= mid 지점의 N-1개의 원판을 to 지점으로 옮긴다.)
 		Honoi(N-1, mid, start, end);
 	}
 

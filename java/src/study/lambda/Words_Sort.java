@@ -76,7 +76,7 @@ public class Words_Sort {
 		bw.write(str[0]+"\n");
 		
 		for(int i = 1; i < N; i++) {
-			//똑같은건 제거
+			// 똑같은건 제거
 			if(!str[i].equals(str[i-1])) {
 				bw.write(str[i] + "\n");
 			}

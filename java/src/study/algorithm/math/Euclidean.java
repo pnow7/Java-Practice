@@ -13,18 +13,18 @@ public class Euclidean {
 		Long num2 = Long.parseLong(st.nextToken());
 		
 		bw.write(lcm(num1,num2)+"");
-		
 		br.close();
 		bw.flush();
 		bw.close();
 	}
 	
 	public static Long gcd(Long a, Long b) {
-		while(b != 0) {
+		while (b != 0) {
 			Long r = a%b;
 			a = b;
 			b = r;
 		}
+		
 		return a;
 	}
 

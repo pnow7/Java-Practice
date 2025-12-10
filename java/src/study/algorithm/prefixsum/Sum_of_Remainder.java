@@ -29,9 +29,10 @@ public class Sum_of_Remainder {
 		
 		R[0]++;														// M으로 나눈 나머지가 0인것도 포함시켜야함
 		int remainder = 0;
-		StringTokenizer st1 = new StringTokenizer(br.readLine());
+		
+		st = new StringTokenizer(br.readLine());
 		for (int i = 1; i <= N; i++) {
-			A[i - 1] = Integer.parseInt(st1.nextToken());
+			A[i - 1] = Integer.parseInt(st.nextToken());
 			S[i] = S[i - 1] + A[i - 1];
 			remainder = (int)((S[i] % M + M) % M);					// 나머지 음수 방지
 			R[remainder]++;

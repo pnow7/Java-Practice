@@ -82,15 +82,15 @@ public class BackTracking1 {
 		arr = new int[M];
 		visit = new boolean[N];
 		dfs(N, M, 0);
-		bw.write(sb.toString());
 		
+		bw.write(sb.toString());
 		br.close();
 		bw.flush();
 		bw.close();
 	}
 	
 	public static void dfs(int N, int M, int depth) {
-		if(depth == M) {
+		if (depth == M) {
 			for(int val : arr) {
 				sb.append(val).append(" ");
 			}
@@ -98,8 +98,8 @@ public class BackTracking1 {
 			return;
 		}
 		
-		for(int i = 0; i < N; i++) {
-			if(!visit[i]) {
+		for (int i = 0; i < N; i++) {
+			if (!visit[i]) {
 				visit[i] = true;
 				arr[depth] = i + 1;
 				dfs(N, M, depth + 1);

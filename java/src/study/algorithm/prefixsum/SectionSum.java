@@ -53,8 +53,7 @@ public class SectionSum {
 		}
 		
 		br.close();
-		System.out.print(sb);
-		
+		System.out.print(sb);	
 	}
 
 }

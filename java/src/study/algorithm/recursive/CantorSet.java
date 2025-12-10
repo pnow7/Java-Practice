@@ -38,13 +38,15 @@ public class CantorSet {
 		while((str = br.readLine()) != null) {
 			N = Integer.parseInt(str);
 			sb = new StringBuilder();
-			int length = (int)Math.pow(3, N);
+			 
+			int length = (int) Math.pow(3, N);
 			
-			for(int i = 0; i < length; i++) {
+			for (int i = 0; i < length; i++) {
 				sb.append("-");
 			}
 			
 			func(0, length);
+			
 			System.out.println(sb);
 		}
 	
@@ -52,19 +54,20 @@ public class CantorSet {
 	static void func(int start, int size) {
 		if(size == 1) return; 
 		
-		int third = size/3;
-		//start+newSize : 중간 등분 시작
-		//start+2*newSize : 마지막 등분 시작
+		int third = size / 3;
+		
+		// start + newSize : 중간 등분 시작
+		// start + 2*newSize : 마지막 등분 시작
 		for(int i = start+third; i < start+2*third; i++) {
-			//setCharAt(int index, String s): index 위치의 문자를 s로 변경(' '로)
-			//공백처리
+			// setCharAt(int index, String s): index 위치의 문자를 s로 변경(' '로)
+			// 공백처리
 			sb.setCharAt(i, ' '); 
 		}
 		
-		//왼쪽 (0부터 시작해서 사이즈 9까지니까 0부터 9까지)
+		// 왼쪽 (0부터 시작해서 사이즈 9까지니까 0부터 9까지)
 		func(start, third);
 		
-		//오른쪽(18부터 시작해서 사이즈 9까지니까 18부터 27까지)
+		// 오른쪽(18부터 시작해서 사이즈 9까지니까 18부터 27까지)
 		func(start+2*third, third);
 	}
 

@@ -12,6 +12,7 @@ package study.algorithm.integer;
 67863915
 
 */
+
 import java.io.*;
 import java.util.*;
 import java.math.*;
@@ -24,8 +25,9 @@ public class BigIntegerFactorial {
 		StringBuilder sb = new StringBuilder();
 		
 		int T = Integer.parseInt(br.readLine());
-		//Long보다 값이 커질대 BigInteger써야한다
-		for(int i = 0; i < T; i++) {
+		
+		// Long보다 값이 커질대 BigInteger써야한다
+		for (int i = 0; i < T; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int N = Integer.parseInt(st.nextToken());
 			int M = Integer.parseInt(st.nextToken());
@@ -42,16 +44,20 @@ public class BigIntegerFactorial {
 	
 	public static BigInteger factorial(int num) {
 		BigInteger result = BigInteger.ONE;
-		for(int i = 2; i <= num; i++) {
+		
+		for (int i = 2; i <= num; i++) {
 			result = result.multiply(BigInteger.valueOf(i));
 		}
+		
 		return result;
 	}
-//	public static BigInteger factorial(int num) {
-//		if(num == 0 || num == 1) {
-//			return BigInteger.ONE;
-//		}
-//		return new BigInteger(""+num).multiply(factorial(num-1));
-//	}
+	
+	public static BigInteger factorial2(int num2) {
+		if (num2 == 0 || num2 == 1) {
+			return BigInteger.ONE;
+		}
+		
+		return new BigInteger(""+num2).multiply(factorial(num2-1));
+	}
 
 }

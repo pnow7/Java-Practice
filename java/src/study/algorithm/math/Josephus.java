@@ -41,7 +41,7 @@ public class Josephus {
 		int N = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
 
-		//1, 2 뒤로 보내고 3빼고, 4, 5 뒤로 보내고 6 빼고 
+		// 1, 2 뒤로 보내고 3빼고, 4, 5 뒤로 보내고 6 빼고 
 		for(int i = 1; i <= N; i++) {
 			q.offer(i);
 		}
@@ -51,6 +51,7 @@ public class Josephus {
 				q.offer(q.peek());
 				q.removeFirst();
 			}
+			
 			q1.offer(q.poll());
 		}
 		

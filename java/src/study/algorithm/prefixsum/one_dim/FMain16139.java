@@ -31,16 +31,17 @@ public class FMain16139 {
 		int Q = Integer.parseInt(br.readLine());
 		
 		int[][] prefixSum = new int[26][S.length() + 1];
-		for(int i = 0; i <S.length(); i++) {
-			for(int j = 0; j < 26; j++) {
+		for (int i = 0; i <S.length(); i++) {
+			for (int j = 0; j < 26; j++) {
 				prefixSum[j][i + 1] = prefixSum[j][i];
 			}
+			
 			prefixSum[S.charAt(i) - 'a'][i + 1]++;
 			
 		}
 		
 		StringTokenizer st;
-		for(int i = 0; i < Q; i++) {
+		for (int i = 0; i < Q; i++) {
 			st = new StringTokenizer(br.readLine());
 			
 			char alpha = st.nextToken().charAt(0);

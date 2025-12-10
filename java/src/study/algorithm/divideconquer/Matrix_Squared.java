@@ -55,6 +55,7 @@ public class Matrix_Squared {
             for (int j = 0; j < N; j++) {
                 System.out.print(arr[i][j] + " ");
             }
+            
             System.out.println();
         }
         
@@ -79,9 +80,11 @@ public class Matrix_Squared {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 long sum = 0;
+                
                 for (int k = 0; k < n; k++) {
                     sum += (long) (A[i][k] * B[k][j]);
                 }
+                
                 result[i][j] = (int) (sum % 1000);
             }
         }

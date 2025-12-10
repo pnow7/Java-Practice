@@ -61,44 +61,47 @@ public class Star_pattern {
 		
 		star(0, 0, N, false);
 		
-		for(int i = 0; i < N; i++) {
-			for(int j = 0; j < N; j++) {
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
 				sb.append(arr[i][j]);
 			}
+			
 			sb.append('\n');
 		}
-		bw.write(sb.toString());
 		
+		bw.write(sb.toString());
 		br.close();
 		bw.flush();
 		bw.close();
 	}
-	//x : 시작행, y : 시작열, N : 블록의 크기, blank : 공백 여부
+	
+	// x : 시작행, y : 시작열, N : 블록의 크기, blank : 공백 여부
 	static void star(int x, int y, int N, boolean blank) {
-		if(blank) {
-			for(int i = x; i < x + N; i++) {
-				for(int j = y; j < y + N; j++) {
+		if (blank) {
+			for (int i = x; i < x + N; i++) {
+				for (int j = y; j < y + N; j++) {
 					arr[i][j] = ' ';
 				}
 			}
+
 			return;
 		}
 		
-		if(N == 1) {
+		if (N == 1) {
 			arr[x][y] = '*';
 			return;
 		}
 		
-		int size = N/3;
+		int size = N / 3;
 		int count = 0;
 		
-		for(int i = x; i < x + N; i += size) {
-			for(int j = y; j < y + N; j += size) {
+		for (int i = x; i < x + N; i += size) {
+			for (int j = y; j < y + N; j += size) {
 				count++;
-				if(count == 5) {
+				
+				if (count == 5) {
 					star(i, j, size, true); //중앙
-				}
-				else {
+				} else {
 					star(i, j, size, false); //나머지
 				}
 			}
@@ -112,7 +115,7 @@ public class Star_pattern {
 
 N = 3인 경우
 
-x=0, y=0, N=3, blank=false
+x = 0, y = 0, N = 3, blank = false
 
 -> size = 1
 
@@ -130,5 +133,6 @@ for 루프 순서 및 count 값:
 
 5가 공백인 이유
 2차원 배열로 했을 때 5번째가 빈 공간이기 때문
+
 */
 

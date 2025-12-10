@@ -30,6 +30,7 @@ package study.algorithm.backtracking;
 
 [출력]
 1 2 3 4
+
 */
 
 import java.io.*;
@@ -61,19 +62,21 @@ public class BackTracking2 {
 	}
 	
 	public static void dfs(int at, int depth) {
-		if(depth == M) {
-			for(int val : arr) {
+		if (depth == M) {
+			for (int val : arr) {
 				sb.append(val).append(" ");
 			}
+			
 			sb.append("\n");
 			return;
 		}
 		
-		for(int i = at; i <= N; i++) {
+		for (int i = at; i <= N; i++) {
 			arr[depth] = i;
 			dfs(i+1, depth+1);
 		}
 	}
+	
 }
 
 /*

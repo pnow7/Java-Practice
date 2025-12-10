@@ -73,6 +73,7 @@ public class Chess {
 		// result 변수를 선언하고 min값 중 가장 작은 값 출력하기 위함
 		int min = 0;
 		int result = Integer.MAX_VALUE;
+		
 		// N x M 체스판에서 K x K 사각형 반복 횟수
 		// ex) 8 8 8 이면 8 x 8체스판에서 8 x 8 사각형은 하나 밖에 없으므로 한번만 돌아감 
 		for (int i = K; i <= N; i++) {

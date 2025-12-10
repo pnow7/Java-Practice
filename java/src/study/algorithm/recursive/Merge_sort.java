@@ -21,6 +21,7 @@ import java.io.*;
 import java.util.*;
 
 public class Merge_sort {
+	
 	int A[];
 	static int[] tmp;
 	static int result = -1;
@@ -38,7 +39,7 @@ public class Merge_sort {
 		tmp = new int[N];
 		
 		st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < N; i++) {
+		for (int i = 0; i < N; i++) {
 			A[i] = Integer.parseInt(st.nextToken());
 		}
 		
@@ -47,11 +48,12 @@ public class Merge_sort {
 		
 	}
 	
-	//p(처음), q(중간), r(끝) 
+	// p(처음), q(중간), r(끝) 
 	public static void merge_sort(int[] A, int p, int r) {
-		if(count > K) return;
-		if(p < r) {
-			int q = (p+r)/2;
+		if (count > K) return;
+		
+		if (p < r) {
+			int q = (p + r) / 2;
 			merge_sort(A, p, q);
 			merge_sort(A, q + 1, r);
 			merge(A, p, q, r);
@@ -63,8 +65,8 @@ public class Merge_sort {
 		int j = q + 1;
 		int t = 0;
 		
-		while(i <= q && j <= r) {
-			if(A[i] <= A[j]) {
+		while (i <= q && j <= r) {
+			if (A[i] <= A[j]) {
 				tmp[t++] = A[i++];
 
 			}
@@ -72,19 +74,22 @@ public class Merge_sort {
 				tmp[t++] = A[j++];
 			}
 		}
-		while(i <= q) {
+		
+		while (i <= q) {
 			tmp[t++] = A[i++];
 		}
-		while(j <= r) {
+		
+		while (j <= r) {
 			tmp[t++] = A[j++];
 		}
 
 		t = 0;
 		i = p;
 		
-		while(i <= r) {
+		while (i <= r) {
 			count++;
-			if(count == K) {
+			
+			if (count == K) {
 				result = tmp[t];
 			}
 			

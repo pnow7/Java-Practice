@@ -55,8 +55,9 @@ public class Sequence {
 			int sum =  prefixsum[i + K] - prefixsum[i];
 			list.add(sum);
 		}
-		int result = Collections.max(list);
 		
+		int result = Collections.max(list);
+
 		System.out.println(result);
 		br.close();
 

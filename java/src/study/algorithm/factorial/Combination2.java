@@ -26,8 +26,7 @@ public class Combination2 {
 		
 		int T = Integer.parseInt(br.readLine());
 		
-		
-		for(int i = 0; i < T; i++) {
+		for (int i = 0; i < T; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());;
 			int N = Integer.parseInt(st.nextToken());
 			int M = Integer.parseInt(st.nextToken());
@@ -40,12 +39,13 @@ public class Combination2 {
 		bw.flush();
 		bw.close();
 	}
+	
 	static int combination(int N, int K) {
-		if(dp[N][K] > 0) {
+		if (dp[N][K] > 0) {
 			return dp[N][K];
 		}
 		
-		if(N == K || K == 0) {
+		if (N == K || K == 0) {
 			return dp[N][K] = 1;
 		}
 		

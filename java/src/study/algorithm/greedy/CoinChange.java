@@ -8,9 +8,9 @@ public class CoinChange {
         int coinCount = 0; 										// 동전 개수
 
         for (int coin : coinValues) {
-        		int count = change / coin;							// 현재 동전으로 거슬러 줄 수 있는 최대 개수 계산
+    		int count = change / coin;							// 현재 동전으로 거슬러 줄 수 있는 최대 개수 계산
 
-        		coinCount += count;
+    		coinCount += count;
             change %= coin;										// 남은 거스름돈 계산
 
             System.out.println(coin + "원짜리 " + count + "개");

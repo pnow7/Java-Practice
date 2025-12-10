@@ -26,30 +26,30 @@ public class Combination2 {
 		
 		int T = Integer.parseInt(br.readLine());
 		
-		
-		for(int i = 0; i < T; i++) {
+		for (int i = 0; i < T; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());;
 			int N = Integer.parseInt(st.nextToken());
 			int M = Integer.parseInt(st.nextToken());
 			
 			sb.append(combination(M,N)).append("\n");
 		}
-		bw.write(sb.toString());
 		
+		bw.write(sb.toString());
 		br.close();
 		bw.flush();
 		bw.close();
 	}
+	
 	static int combination(int N, int K) {
-		if(dp[N][K] > 0) {
+		if (dp[N][K] > 0) {
 			return dp[N][K];
 		}
 		
-		if(N == K || K == 0) {
+		if (N == K || K == 0) {
 			return dp[N][K] = 1;
 		}
 		
-		return dp[N][K] = combination(N-1, K-1) + combination(N-1, K);
+		return dp[N][K] = combination(N - 1, K - 1) + combination(N - 1, K);
 	}
 
 }

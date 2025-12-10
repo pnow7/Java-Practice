@@ -69,8 +69,10 @@ public class Matrix_Multiplication {
                 for (int k = 0; k < A_col; k++) {
                     result[i][j] += A[i][k] * B[k][j];
                 }
+                
                 sb.append(result[i][j]).append(" ");
             }
+            
             sb.append("\n");
         }
     }

@@ -29,6 +29,7 @@ public class FMain10986 {
 		
 		R[0]++;		// M으로 나눈 나머지가 0인것도 포함시켜야함
 		int remainder = 0;
+		
 		StringTokenizer st1 = new StringTokenizer(br.readLine());
 		for (int i = 1; i <= N; i++) {
 			A[i - 1] = Integer.parseInt(st1.nextToken());

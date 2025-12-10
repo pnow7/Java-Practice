@@ -48,7 +48,6 @@ public class Main11659 {
 		
 		br.close();
 		System.out.print(sb);
-		
 	}
 
 }

@@ -21,16 +21,16 @@ public class BinarySearch2 {
 		int[] num = new int[N];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < N; i++) {
+		for (int i = 0; i < N; i++) {
 			num[i] = Integer.parseInt(st.nextToken());
 		}
+		
 		Arrays.sort(num);
 		
 		int M = Integer.parseInt(br.readLine());
 		
 		st = new StringTokenizer(br.readLine());
-		
-		for(int i = 0; i < M; i++) {
+		for (int i = 0; i < M; i++) {
 			int target = Integer.parseInt(st.nextToken());
 			sb.append(upperBound(num, target) - lowerBound(num, target)).append(' ');
 		}
@@ -45,34 +45,36 @@ public class BinarySearch2 {
 		int lo = 0;
 		int hi = arr.length;
 		
-		while(lo < hi) {
+		while (lo < hi) {
 			int mid = (lo+hi)/2;
 			
-			if(key <= arr[mid]) {
+			if (key <= arr[mid]) {
 				hi = mid;
 			}
 			else {
 				lo = mid + 1;
 			}
 		}
-		return lo;
 		
+		return lo;
 	}
+	
 	public static int upperBound(int[] arr, int key) {
 		int lo = 0;
 		int hi = arr.length;
 		
-		while(lo < hi) {
+		while (lo < hi) {
 			int mid = (lo+hi)/2;
 			
-			if(key < arr[mid]) {
+			if (key < arr[mid]) {
 				hi = mid;
 			}
 			else {
 				lo = mid + 1;
 			}
 		}
-		return lo;
 		
+		return lo;
 	}
+	
 }

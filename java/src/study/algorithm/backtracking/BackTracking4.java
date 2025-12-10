@@ -70,8 +70,8 @@ public class BackTracking4 {
 		arr = new int[M];
 		
 		dfs(1, 0);
-		bw.write(sb.toString());
 		
+		bw.write(sb.toString());
 		br.close();
 		bw.flush();
 		bw.close();
@@ -79,15 +79,16 @@ public class BackTracking4 {
 	}
 	
 	public static void dfs(int at, int depth) {
-		if(depth == M) {
-			for(int val : arr) {
+		if (depth == M) {
+			for (int val : arr) {
 				sb.append(val).append(" ");
 			}
+			
 			sb.append("\n");
 			return;
 		}
 		
-		for(int i = at; i <= N; i++) {
+		for (int i = at; i <= N; i++) {
 			arr[depth] = i;
 			dfs(i, depth + 1);
 		}
