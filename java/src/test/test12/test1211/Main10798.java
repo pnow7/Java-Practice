@@ -64,7 +64,7 @@ public class Main10798 {
 			}
 		}
 		
-		// 0은 ASCII로 변환하면 NULL임
+		// 0은 ASCII로 변환하면 NULL임 (\u0000)
 		for (int i = 0; i < 15; i++) {
 			for (int j = 0; j < 5; j++) {
 				if (ch[j][i] != 0) { 
