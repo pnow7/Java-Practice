@@ -1,6 +1,7 @@
 package study.algorithm.divideconquer;
 
 /*
+[행렬 곱]
 
 [입력]
 1000
@@ -42,6 +43,7 @@ public class Fibonacci_divide_conquer {
         return I;
     }
     
+    // 행렬 곱
     static long[][] multiply(long[][] A, long[][] B) {
         int n = A.length;
         
@@ -76,11 +78,11 @@ public class Fibonacci_divide_conquer {
 
 /*
 
-1️⃣ 피보나치 수의 기본 정의
+1️. 피보나치 수의 기본 정의
 F(0) = 0, F(1) = 1
 F(n) = F(n-1) + F(n-2) (n >= 2)
 
-2️⃣ 점화식을 행렬로 표현하기
+2️. 점화식을 행렬로 표현하기
 피보나치 점화식은 선형이니까 행렬 곱셈으로 옮길 수 있음
 [ F(n)   ]   [ 1 1 ]   [ F(n-1) ]
 [ F(n-1) ] = [ 1 0 ] * [ F(n-2) ]
@@ -90,14 +92,14 @@ A = [ 1 0 ]
 
 👉 A는 피보나치 전이 행렬
 
-3️⃣ 반복 적용
+3️. 반복 적용
 [ F(n-1) ]           [ F(1) ]
 [ F(n-2) ] = A^(n) * [ F(0) ]
 
         [ 1 ]   [ F(n-1) ]
 A^(n) * [ 0 ] = [ F(n-2) ]
 
-4️⃣ 요약
+4️. 요약
 전이 행렬 
     [ 1 1 ]
 𝐴 = [ 1 0 ] 을 거듭제곱하면 바로 F(n) 구할 수 있음
