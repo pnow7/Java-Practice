@@ -53,11 +53,11 @@ public class Meetings2 {
 		Collections.sort(meetings, (a, b) -> {
 			// 종료 시간이 같으면 시작 시간을 기준으로 오름차순
 			if (a.end == b.end) {
-				return Integer.compare(a.start, b.start);
+				return a.start - b.start;
 			}
 			
 			// 종료시간이 다르면 종료시간을 기준으로 오름차순
-			return Integer.compare(a.end, b.end);
+			return a.end - b.end;
 		});
 		
 		int count = 0;
@@ -74,4 +74,5 @@ public class Meetings2 {
 		System.out.println(count);
 		br.close();
 	}
+	
 }

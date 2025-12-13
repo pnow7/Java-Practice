@@ -1,6 +1,7 @@
 package study.algorithm.dp;
 
 /*
+- 평범한 배낭 (12865)
 
 n: 물건의 개수
 k: 최대 무게
@@ -10,6 +11,15 @@ v: 가치
 
 물건 무게에 맞춰 가방에 들어갈 수 있는 물건의 최대 가치 구하기
 
+[입력]
+4 7
+6 13
+4 8
+3 6
+5 12
+
+[출력]
+14
 */
 
 import java.io.*;
@@ -35,6 +45,7 @@ public class Dp_max {
 		
 		int[][] dp = new int[n + 1][k + 1];
 		
+		// i: 물건, j: 무게, w[i]: 현재 물건, v[i]: 가치
 		for(int i = 1; i <= n; i++) {
 			for(int j = 1; j <= k; j++) {
 				if(w[i] > j) {

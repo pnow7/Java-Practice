@@ -1,7 +1,9 @@
 package study.stackque;
 
-//문자열 검증(올바른 괄호인지 확인)
+// 문자열 검증(올바른 괄호인지 확인)
+
 import java.util.*;
+
 public class Stack2 {
 	
 	 public static boolean isValid(String s) {
@@ -24,7 +26,8 @@ public class Stack2 {
 	            }
 	        }
 
-	        return stack.isEmpty(); // 스택이 비어 있으면 올바른 괄호
+	        // 스택이 비어 있으면 올바른 괄호
+	        return stack.isEmpty(); 
 	    }
 
 	    public static void main(String[] args) {

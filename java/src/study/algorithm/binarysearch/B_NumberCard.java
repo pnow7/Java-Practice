@@ -50,18 +50,18 @@ public class B_NumberCard {
 	}
 	
 	public static int BinarySearch(int num) {
-		int low = 0;
-		int high = N - 1;
+		int lo = 0;
+		int hi = N - 1;
 		
-		while (low <= high) {
-			int mid = (low + high) / 2;
+		while (lo <= hi) {
+			int mid = (lo + hi) / 2;
 			int middleValue = num1[mid];
 			
 			if(middleValue > num) {
-				high = mid - 1;
+				hi = mid - 1;
 			}
 			else if(middleValue < num) {
-				low = mid + 1;
+				lo = mid + 1;
 			}
 			else {
 				return 1;

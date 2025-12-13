@@ -21,7 +21,9 @@ public class Member {
 	
 }
 
-//@Override
-//public String toString() {
-//	return id + " : " + name;
-//}
+/*
+@Override
+public String toString() {
+	return id + " : " + name;
+}
+*/

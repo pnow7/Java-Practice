@@ -54,6 +54,8 @@ public class NumberOfPapers {
         br.close();
     }
 
+    // 정사각형 영역을 재귀적으로 4등분
+    // 영역 전체가 같은 색인지 확인 → 2차원 배열 내의 색종이 개수, 특정 숫자 칸의 개수 확인
     static void divideConquer(int x, int y, int size) {
         if (check(x, y, size)) {
             if (paper[x][y] == -1) {

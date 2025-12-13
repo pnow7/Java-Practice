@@ -36,12 +36,12 @@ public class B_Cutting_LAN {
     }
 
     static long binarySearch(int[] arr, int N) {
-        long low = 1;
-        long high = Math.max(arr[arr.length - 1], 1);
+        long lo = 1;
+        long hi = arr[arr.length - 1];
         long maxLen = 0;
 
-        while (low <= high) {
-            long mid = low + (high - low) / 2;
+        while (lo <= hi) {
+            long mid = lo + (hi - lo) / 2;
 
             long count = 0;
             for (int len : arr) {
@@ -50,9 +50,9 @@ public class B_Cutting_LAN {
 
             if (count >= N) {
                 maxLen = mid;
-                low = mid + 1;
+                lo = mid + 1;
             } else {
-                high = mid - 1;
+                hi = mid - 1;
             }
         }
 

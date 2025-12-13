@@ -1,6 +1,7 @@
 package study.algorithm.dp;
 
 /*
+- 01타일 (1904)
 
 지원이에게 2진 수열을 가르쳐 주기 위해, 지원이 아버지는 그에게 타일들을 선물해주셨다. 
 
@@ -45,7 +46,8 @@ public class Dp {
 		
 		int N = Integer.parseInt(br.readLine());
 		
-		/* 기저 조건 설정
+		/* 
+		 * 기저 조건 설정
 		 * 동적계획법(DP)에서 가장 기본적이면서 중요한 부분
 		 * dp[1] = 1: 길이가 1일 때 가능한 경우의 수(예: 1 -> 1가지)
 		 * dp[2] = 2: 길이가 2일 때 가능한 경우의 수(예: 11, 00 -> 2가지)
@@ -71,6 +73,12 @@ public class Dp {
 		System.out.println(tile3(N));
 	}
 	
+	/*
+	 *  재귀 + 메모제이션(Top-down)
+	 *  재귀 함수를 호출 → N부터 시작해서 작은 문제로 내려감
+	 *  dp 배열에 값이 없으면 계산하고 저장(dp[n] = -1로 초기화된 경우)하고,
+	 *  값이 있으면 저장된 값을 바로 반환
+	 */
 	public static int tile1(int n) {
 		if (dp[n] == -1) {
 			dp[n] = (tile1(n - 1) + tile1(n - 2)) % 15746;
@@ -79,6 +87,11 @@ public class Dp {
 		return dp[n];
 	}
 	
+	/*
+	 * 반복문 (Bottom-up) 
+	 * 길이가 1, 2인 기저 조건부터 시작해서
+	 * 반복문을 이용해 i = 3 부터 N까지 차례대로 계산
+	 */
 	public static int tile2(int n) {
 		if (n == 1) return 1;
 		if (n == 2) return 2;
@@ -94,6 +107,11 @@ public class Dp {
 		return dp[n];
 	}
 	
+	/*
+	 * 반복문 + 공간 최적화
+	 * 상향식 방식과 동일하지만 dp 배열 사용 X
+	 * 오직 a, b만 사용하여 공간 복잡도를 O(N)에서 O(1)로 최적화
+	 */
 	public static int tile3(int n) {
 		if (n == 1) return 1;
 		if (n == 2) return 2;

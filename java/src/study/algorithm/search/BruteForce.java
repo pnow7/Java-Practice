@@ -6,6 +6,8 @@ public class BruteForce {
 		int[] arr = {1, 3, 5, 7, 9};
         int target = 10;
 
+        // i: length - 1, 
+        // j: i + 1
         for (int i = 0; i < arr.length-1; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] + arr[j] == target) {

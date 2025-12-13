@@ -1,6 +1,8 @@
 package study.setmaphash;
 
 /*
+- 영단어 암기는 괴로워 (20920)
+
 자주 나오는 단어일수록 앞에 배치한다.
 
 해당 단어의 길이가 길수록 앞에 배치한다.
@@ -17,11 +19,8 @@ N+1번째 줄까지 외울 단어를 입력받는다.
 단어장에 단어가 반드시 1개 이상 존재하는 입력만 주어진다.
 
 빈도수 내림차순
-
 길이 내림차순
-
 사전 순 오름차순
-
 
 [입력]
 7 4
@@ -37,30 +36,6 @@ sand
 sand
 apple
 append
-
-[입력]
-12 5
-appearance
-append
-attendance
-swim
-swift
-swift
-swift
-mouse
-wallet
-mouse
-ice
-age
-
-[출력]
-swift
-mouse
-appearance
-attendance
-append
-wallet
-
 
 */
 
@@ -81,45 +56,45 @@ public class MapCompareLamda {
 		
 		for (int i = 0; i < N; i++) {
 			String s = br.readLine();
-			//단어의 길이가 M 미만인 단어는 제외
+			// 단어의 길이가 M 미만인 단어는 제외
 			if (s.length() < M) continue;
 			
 			map.put(s, map.getOrDefault(s, 0)+1);
 		}
 		
-		//map의 keySet(단어목록)을 리스트로 변환
+		// map의 keySet(단어목록)을 리스트로 변환
 		List<String> list = new ArrayList<>(map.keySet());
 		
-		Collections.sort(list, new Comparator<String>() {
-			@Override
-			public int compare(String s1, String s2) {
-				//내림차순
-				if(Integer.compare(map.get(s1), map.get(s2)) != 0) {
-					return Integer.compare(map.get(s2), map.get(s1));
-				}
-				//내림차순
-				if(s1.length() != s2.length()) {
-					return s2.length() - s1.length();
-				}
-				//오름차순
-				return s1.compareTo(s2);
-			}
+		Collections.sort(list, (o1, o2) -> {
+		    // 내림차순
+		    if (map.get(o1) != map.get(o2)) {
+		        return map.get(o2) - map.get(o1);
+		    }
+		    
+		    // 단어 길이 비교 (내림차순)
+		    if (o1.length() != o2.length()) {
+		        return o2.length() - o1.length();
+		    }
+		    
+		    // 알파벳 순서 비교 (오름차순: o1.compareTo(o2))
+		    return o1.compareTo(o2);
 		});
 		
 		/*
-		Collections.sort(list, (o1, o2) -> {
-			//내림차순
-			if(Integer.compare(map.get(o2), map.get(o1)) != 0) {
-				return Integer.compare(map.get(o2), map.get(o1));
+		Collections.sort(list, new Comparator<String>() {
+			@Override
+			public int compare(String s1, String s2) {
+				// 내림차순
+				if(Integer.compare(map.get(s1), map.get(s2)) != 0) {
+					return Integer.compare(map.get(s2), map.get(s1));
+				}
+				// 내림차순
+				if(s1.length() != s2.length()) {
+					return s2.length() - s1.length();
+				}
+				// 오름차순
+				return s1.compareTo(s2);
 			}
-			
-			//내림차순
-			if(Integer.compare(o2.length(), o1.length()) != 0) {
-				return Integer.compare(o2.length(), o1.length());
-			}
-			
-			//오름차순
-			return o1.compareTo(o2);
 		});
 		*/
 		

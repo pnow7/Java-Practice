@@ -5,7 +5,7 @@ public class StringStudy {
 	public static void main(String[] args) {
 		String ssn = "9506241230123";
 
-		// .charAt()
+		// charAt()
 		char sex = ssn.charAt(6);
 		System.out.println("ssn.charAt(6): " + sex);
 		switch (sex) {
@@ -19,7 +19,7 @@ public class StringStudy {
 			break;
 		}
 
-		// .length
+		// length
 		int length = ssn.length();
 		System.out.println("length:" + length);
 		if (length == 13) {
@@ -28,14 +28,14 @@ public class StringStudy {
 			System.out.println("주민번호 자리수가 틀립니다.");
 		}
 
-		// .replace()
+		// replace()
 		String oldStr = "자바 문자열은 불변입니다. 자바 문자열은 String입니다.";
 		String newStr = oldStr.replace("자바", "JAVA");
 
 		System.out.println(oldStr);
 		System.out.println(newStr);
 
-		// .substring()
+		// substring()
 		ssn = "880815-1234567";
 
 		String firstNum = ssn.substring(0, 6);
@@ -44,7 +44,7 @@ public class StringStudy {
 		String secondNum = ssn.substring(7);
 		System.out.println(secondNum);
 
-		// .substring()
+		// substring()
 		String subject = "자바 프로그래밍 자바12345 자바 6";
 		System.out.println("문자열의 길이:" + subject.length());
 		int location = subject.indexOf("프로그래밍");
@@ -52,7 +52,7 @@ public class StringStudy {
 		String substring = subject.substring(location);
 		System.out.println(substring);
 
-		// .indexOf()
+		// indexOf()
 		location = subject.indexOf("자바");
 		System.out.println("자바가 있는 시작위치:" + location);
 		if (location != -1) {
@@ -64,7 +64,7 @@ public class StringStudy {
 		String pythonStr = subject.replace("자바", "Python");
 		System.out.println("pythonStr:" + pythonStr);
 
-		// .contains()
+		// contains()
 		boolean result = subject.contains("자바");
 		if (result) {
 			System.out.println("자바와 관련된 책이군요");
@@ -74,7 +74,7 @@ public class StringStudy {
 
 		String board = "1,자바학습,참조타입 String을 학습합니다.,심남희";
 
-		// .split()
+		// split()
 		String[] tokens = board.split(",");
 
 		// 인덱스별로 읽기

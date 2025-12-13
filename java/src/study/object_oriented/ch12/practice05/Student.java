@@ -19,10 +19,10 @@ public class Student {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof Student) {
+		if (obj instanceof Student) {
 			Student student = (Student) obj;
 			
-			if(studentNum.equals(student.getStudentNum())) {
+			if (studentNum.equals(student.getStudentNum())) {
 				return true;
 			}
 		}
@@ -35,18 +35,21 @@ public class Student {
 	}
 }
 
-//@Override
-//public boolean equals(Object obj) {
-//	if(obj instanceof Student) {
-//		Student student = (Student) obj;
-//		if(studentNum.equals(student.getStudentNum())) {
-//			return true;
-//		}
-//	}
-//	return false;
-//}
-//
-//@Override
-//public int hashCode() {
-//	return studentNum.hashCode();
-//}
+/*
+@Override
+public boolean equals(Object obj) {
+	if (obj instanceof Student) {
+		Student student = (Student) obj;
+		if (studentNum.equals(student.getStudentNum())) {
+			return true;
+		}
+	}
+	
+	return false;
+}
+
+@Override
+public int hashCode() {
+	return studentNum.hashCode();
+}
+*/

@@ -98,6 +98,7 @@ public class BackTracking1 {
 			return;
 		}
 		
+		// 순열 → boolean[] visit 배열로 중복 방문 체크 및 사용 후 해제 (visit[i] = false;)
 		for (int i = 0; i < N; i++) {
 			if (!visit[i]) {
 				visit[i] = true;

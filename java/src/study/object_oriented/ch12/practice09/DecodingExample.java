@@ -12,7 +12,6 @@ public class DecodingExample {
 		String str = new String(bytes, "UTF-8");
 		
 		System.out.println("str: " + str);
-
 	}
 
 }

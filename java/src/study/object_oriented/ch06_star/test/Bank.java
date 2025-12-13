@@ -26,14 +26,14 @@ public class Bank {
 		this.money = money;
 	}
 	
-	//예금
+	// 예금
 	public void deposit(int amount) {
 		money += money;
 	}
 	
-	//출금
+	// 출금
 	public boolean withdraw(int amount) {
-		if(money >= amount) {
+		if (money >= amount) {
 			money -= amount;
 			return true;
 		}
@@ -42,10 +42,10 @@ public class Bank {
 		}
 	}
 	
-	//계좌번호 찾기
+	// 계좌번호 찾기
 	public static Bank findAccount(List<Bank> list, String number) {
-		for(Bank acc : list) {
-			if(acc.getNumber().equals(number)) {
+		for (Bank acc : list) {
+			if (acc.getNumber().equals(number)) {
 				return acc;
 			}
 		}
@@ -56,7 +56,7 @@ public class Bank {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		List<Bank> bankList = new ArrayList<>();
 		
-		while(true) {
+		while (true) {
 			System.out.println("-----------------------------------------");
 			System.out.println("1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 | 5.종료");
 			System.out.println("-----------------------------------------");
@@ -65,7 +65,7 @@ public class Bank {
 			int choice = Integer.parseInt(br.readLine());
 			System.out.println("---------------");
 			
-			if(choice == 1) {
+			if (choice == 1) {
 				System.out.println("계좌생성");
 				System.out.println("---------------");
 				System.out.println("계좌번호:");
@@ -88,10 +88,10 @@ public class Bank {
 				
 				System.out.println("계좌가 생성되었습니다.");
 			}
-			else if(choice == 2) {
+			else if (choice == 2) {
 				System.out.println("계좌목록");
 				System.out.println("---------------");
-				for(Bank acc : bankList) {
+				for (Bank acc : bankList) {
 					System.out.println(acc.getNumber() + "\t" + acc.getName() + "\t" + acc.getMoney());
 				}
 			}
@@ -102,7 +102,7 @@ public class Bank {
 				String number = br.readLine();
 				
 				Bank acc = findAccount(bankList, number);
-				if(acc != null) {
+				if (acc != null) {
 					System.out.println("예금액:");
 					int money = Integer.parseInt(br.readLine());
 					acc.deposit(money);
@@ -111,17 +111,17 @@ public class Bank {
 					System.out.println("계좌를 찾을 수 없습니다.");
 				}
 			}
-			else if(choice == 4) {
+			else if (choice == 4) {
 				System.out.println("출금");
 				System.out.println("---------------");
 				System.out.println("계좌번호:");
 				String number = br.readLine();
 				
 				Bank acc = findAccount(bankList, number);
-				if(acc != null) {
+				if (acc != null) {
 					System.out.println("출금액:");
 					int money = Integer.parseInt(br.readLine());
-					if(acc.withdraw(money)) {
+					if (acc.withdraw(money)) {
 						System.out.println("출금이 완료되었습니다.");
 					} else {
 						System.out.println("잔액이 부족합니다.");
@@ -130,7 +130,7 @@ public class Bank {
 					System.out.println("계좌를 찾을 수 없습니다.");
 				}
 			}
-			else if(choice == 5) {
+			else if (choice == 5) {
 				System.out.println("프로그램 종료");
 				break;
 			}

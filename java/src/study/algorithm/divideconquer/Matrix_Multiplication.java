@@ -58,6 +58,7 @@ public class Matrix_Multiplication {
         br.close();
     }
 
+    // 행렬 곱셈
     static void multiply(int[][] A, int[][] B) {
         int A_row = A.length;
         int A_col = A[0].length;

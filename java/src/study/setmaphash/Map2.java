@@ -1,6 +1,6 @@
 package study.setmaphash;
 /*
-듣보잡
+- 듣보잡
 
 [입력]
 3 4
@@ -16,6 +16,7 @@ clinton
 2
 baesangwook
 ohhenrie
+
 */
 
 import java.io.*;

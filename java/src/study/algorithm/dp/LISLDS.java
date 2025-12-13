@@ -1,12 +1,30 @@
 package study.algorithm.dp;
 
+/*
+- 가장 긴 바이토닉 부분 수열 (11054)
+
+수열 S가 어떤 수 Sk를 기준으로 
+S1 < S2 < ... Sk-1 < Sk > Sk+1 > ... SN-1 > SN을 만족한다면, 
+그 수열을 바이토닉 수열이라고 한다.
+
+→ 바이토닉 수열은 증가했다가 감소하는 형태를 가진 수열
+
+즉, 수열을 중간의 한 원소 A[i]를 기준으로 두 부분으로 나눌 수 있습니다.
+왼쪽 부분: A[0]부터 A[i]까지는 증가하는 부분 수열 (LIS)
+오른쪽 부분: A[i]부터 A[N-1]까지는 감소하는 부분 수열 (LDS)
+
+=> 가장 긴 바이토닉 부분 수열의 길이는 모든 원소 A[i]에 대해 
+(A[i]를 포함하는 LIS의 길이) + (A[i]를 포함하는 LDS의 길이 ) - 1 을 계산한 값 중 최댓값입니다. 
+(A[i]가 두 번 중복 계산되므로 1을 빼줍니다.)
+
+*/
+
 import java.io.*;
 import java.util.*;
 
 public class LISLDS {
 
     public static void main(String[] args) throws IOException {
-        // 입력
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         int[] A = new int[N];
@@ -17,8 +35,8 @@ public class LISLDS {
         }
 
         // 증가, 감소 부분 수열
-        int[] up = lis(A);
-        int[] down = lds(A);
+        int[] up = LIS(A);
+        int[] down = LDS(A);
 
         // 바이토닉 수열 최대 길이
         int max = 0;
@@ -29,7 +47,11 @@ public class LISLDS {
         System.out.println(max);
     }
     
-    public static int[] lis(int[] arr) {
+    /*
+     * LIS: arr의 왼쪽부터 오른쪽 탐색
+     * 최장 증가 부분 수열의 길이 구함
+     */
+    public static int[] LIS(int[] arr) {
         int n = arr.length;
         int[] dp = new int[n];
         Arrays.fill(dp, 1);
@@ -44,7 +66,11 @@ public class LISLDS {
         return dp;
     }
 
-    public static int[] lds(int[] arr) {
+    /*
+     * LDS: arr의 오른쪽부터 왼쪽 탐색
+     * 최장 감소 부분 수열 길이 구함
+     */
+    public static int[] LDS(int[] arr) {
         int n = arr.length;
         int[] dp = new int[n];
         Arrays.fill(dp, 1);

@@ -92,6 +92,7 @@ public class Matrix_Squared {
         return result;
     }
     
+    // 행렬 거듭제곱 A^B
     static int[][] pow(int[][] A, long exponent) {
         if (exponent == 0) return identifyMatrix(A);
         if (exponent == 1) return A;

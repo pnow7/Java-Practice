@@ -88,6 +88,8 @@ public class BackTracking4 {
 			return;
 		}
 		
+		// 중복 조합 → dfs(at, depth)에서 시작 지점 at 변수를 사용. 
+		// 다음 재귀 호출 시 dfs(i, depth+1)로 시작 지점을 현재 값으로 고정 (중복 허용)
 		for (int i = at; i <= N; i++) {
 			arr[depth] = i;
 			dfs(i, depth + 1);

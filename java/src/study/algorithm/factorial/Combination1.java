@@ -1,7 +1,6 @@
 package study.algorithm.factorial;
 /*
-다리놓기
-
+- 다리놓기
 
 3
 2 2
@@ -11,7 +10,8 @@ package study.algorithm.factorial;
 1
 5
 67863915
- */
+
+*/
 import java.io.*;
 import java.math.BigInteger;
 import java.util.*;
@@ -30,15 +30,17 @@ public class Combination1 {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int N = Integer.parseInt(st.nextToken());
 			int M = Integer.parseInt(st.nextToken());
+			
 			BigInteger  result = factorial(M)
 								  .divide(factorial(M-N).multiply(factorial(N)));
 			sb.append(result).append("\n");
 			
 			result1[i] = BC(M,N);
 		}
-		
+		// BigInteger
 		bw.write(sb+"");
 		
+		// BC
 		for(int i : result1) {
 			bw.write(i+"\n");
 		}
@@ -52,6 +54,7 @@ public class Combination1 {
 		if (num == 0 || num == 1) {
 			return BigInteger.ONE;
 		}
+		
 		return new BigInteger(""+num).multiply(factorial(num-1));
 	}
 	

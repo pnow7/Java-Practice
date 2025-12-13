@@ -1,7 +1,6 @@
 package study.algorithm.factorial;
 /*
-다리놓기
-
+- 다리놓기
 
 3
 2 2
@@ -33,8 +32,8 @@ public class Combination2 {
 			
 			sb.append(combination(M,N)).append("\n");
 		}
-		bw.write(sb.toString());
 		
+		bw.write(sb.toString());
 		br.close();
 		bw.flush();
 		bw.close();

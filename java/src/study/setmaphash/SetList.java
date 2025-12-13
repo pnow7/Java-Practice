@@ -26,11 +26,11 @@ public class SetList {
 		String s = result1.toString().replace("[", "").replace("]", "");
 		System.out.println(s);
 		
-		//오름차순 정렬
+		// 오름차순 정렬
 		Collections.sort(result1);
 		System.out.println(result1);
 		
-		//내림차순 정렬
+		// 내림차순 정렬
 		Collections.sort(result1, Collections.reverseOrder());
 		System.out.println(result1);
 		

@@ -19,13 +19,11 @@ public class Euclidean {
 	}
 	
 	public static Long gcd(Long a, Long b) {
-		while (b != 0) {
-			Long r = a%b;
-			a = b;
-			b = r;
+		if (b == 0) {
+			return a;
 		}
 		
-		return a;
+		return gcd(b, a % b);
 	}
 
 	public static Long lcm(Long a, Long b) {

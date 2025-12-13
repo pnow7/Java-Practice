@@ -7,29 +7,29 @@ public class ListIntegerArrayList {
 		Random rand = new Random();
 		Set<Integer> numChk = new HashSet<>();
 		
-		while(numChk.size() < 6) {
+		while (numChk.size() < 6) {
 			int lotto = rand.nextInt(45)+1;
 			numChk.add(lotto);
 		}
 		
-		for(int result1 : numChk) {
+		for (int result1 : numChk) {
 			System.out.print(result1 +" ");
 		}
 		System.out.println("");
 		
-		//리스트로 만들기
+		// 리스트로 만들기
 		List<Integer> result1 = new ArrayList<>(numChk);
 		System.out.println(result1);
 		
-		//[] 지우기
+		// [] 지우기
 		String s = result1.toString().replace("[", "").replace("]", "");
 		System.out.println(s);
 		
-		//오름차순 정렬
+		// 오름차순 정렬
 		Collections.sort(result1);
 		System.out.println(result1);
 		
-		//내림차순 정렬
+		// 내림차순 정렬
 		Collections.sort(result1, Collections.reverseOrder());
 		System.out.println(result1);
 		

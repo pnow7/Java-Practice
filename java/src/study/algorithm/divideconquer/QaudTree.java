@@ -45,6 +45,7 @@ public class QaudTree {
         br.close();
     }
 
+    // 2차원 공간을 4개의 사분면으로 반복적으로 분할하여 압축된 문자열로 표현
     public static String divideConquer(int x, int y, int size) {
         if (Check(x, y, size)) {
             return String.valueOf(quadTree[x][y]);
@@ -59,7 +60,7 @@ public class QaudTree {
                 divideConquer(x + newSize, y + newSize, newSize) +
                 ")";
     }
-
+    
     public static boolean Check(int x, int y, int size) {
         int num = quadTree[x][y];
 

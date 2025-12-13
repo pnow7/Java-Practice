@@ -1,7 +1,6 @@
 package study.algorithm.search;
 /*
-다리놓기
-
+- 다리놓기
 
 3
 2 2
@@ -11,7 +10,9 @@ package study.algorithm.search;
 1
 5
 67863915
- */
+
+*/
+
 import java.io.*;
 import java.util.*;
 

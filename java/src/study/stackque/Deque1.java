@@ -1,13 +1,14 @@
 package study.stackque;
 
 /*
+
 Deque<Integer> q = new LinkedList<>();'
 
-q.offer();	// push
-q.pop();	// pop
-q.size();	// size
+q.offer();		// push
+q.pop();		// pop
+q.size();		// size
 q.isEmpty();	// empty
-q.peek();	// front
+q.peek();		// front
 q.peekLast();	// back
 
 [입력]
@@ -41,6 +42,7 @@ front
 -1
 0
 3
+
 */
 
 import java.io.*;

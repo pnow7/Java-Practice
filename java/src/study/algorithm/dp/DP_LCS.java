@@ -1,6 +1,7 @@
 package study.algorithm.dp;
 
 /*
+- LCS (9251)
 
 LCS(Longest Common Subsequence, 최장 공통 부분 수열)
 
@@ -27,9 +28,18 @@ public class DP_LCS {
 		
 		for(int i = 1; i <= len1; i++) {
 			for(int j = 1; j <= len2; j++) {
+				/*
+				 * 문자가 같을 때 → LCS에 포함될 수 있음.
+				 * 이 문자를 제외한 이전 문자열들의 LCS 길이(dp[i - 1][j - 1])에 1을 더해줌. 
+				 */ 
 				if(str1.charAt(i - 1) == str2.charAt(j - 1)) {
 					dp[i][j] = dp[i - 1][j - 1] + 1;
 				}
+				/*
+				 * 문자가 다를 때 → LCS에 X → 더 큰 LCS 길이 선택 
+				 * str1의 i번째 문자 포기(i - 1 번째 문자까지)와 str2의 j번째 문짜까지의 LCS
+				 * str2의 j번째 문자 포기(j - 1 번째 문자까지)와 str1의 i번재 문자까지의 LCS
+				 */
 				else {
 					dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
 				}
@@ -43,28 +53,12 @@ public class DP_LCS {
 
 /*
 
+ACAYKP
+CAPCAK
+
 A: 첫 번째 문자 'A'는 두 문자열 모두에 존재합니다.
-
-ACAYKP
-
-CAPCAK
-
 C: 첫 번째 'A' 이후에 두 문자열 모두에 'C'가 존재합니다.
-
-ACAYKP
-
-CAPCAK
-
 A: 'C' 이후에 'A'가 또 존재합니다.
-
-ACAYKP
-
-CAPCAK
-
 K: 마지막으로 'A' 이후에 'K'가 공통으로 존재합니다.
-
-ACAYPK
-
-CAPCAK
 
 */

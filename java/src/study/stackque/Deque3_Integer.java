@@ -1,12 +1,13 @@
 package study.stackque;
 
 /*
+
 Deque<Integer> q = new LinkedList<>();
-q.offer();	// push
-q.pop();	// pop
-q.size();	// size
+q.offer();		// push
+q.pop();		// pop
+q.size();		// size
 q.isEmpty();	// empty
-q.peek();	// front
+q.peek();		// front
 q.peekLast();	// back
 
 */
@@ -21,20 +22,21 @@ public class Deque3_Integer {
 			Deque<Integer> q = new LinkedList<>();
 			
 			int N = Integer.parseInt(br.readLine());
-			while(N-- > 0) {
+			while (N-- > 0) {
 				StringTokenizer st = new StringTokenizer(br.readLine());
-				//int와 Integer 객체차이
+				
+				// int와 Integer 객체차이
 				String s = st.nextToken();
+				
 				switch(s) {
 				case "push":
 					q.offer(Integer.parseInt(st.nextToken()));
 					break;
 				case "pop":
 					Integer itm = q.poll();
-					if(itm == null) {
+					if (itm == null) {
 						bw.write("-1\n");
-					}
-					else {
+					} else {
 						bw.write(itm+"\n");
 					}
 					break;
@@ -42,28 +44,25 @@ public class Deque3_Integer {
 					bw.write(q.size()+"\n");
 					break;
 				case "empty":
-					if(q.isEmpty()) {
+					if (q.isEmpty()) {
 						bw.write("1\n");
-					}
-					else {
+					} else {
 						bw.write("0\n");
 					}
 					break;
 				case "front":
 					Integer ite = q.peek();
-					if(ite == null) {
+					if (ite == null) {
 						bw.write("-1\n");
-					}
-					else {
+					} else {
 						bw.write(ite+"\n");
 					}
 					break;
 				case "back":
 					Integer it = q.peekLast();
-					if(it == null) {
+					if (it == null) {
 						bw.write("-1\n");
-					}
-					else {
+					} else {
 						bw.write(it+"\n");
 					}
 					break;

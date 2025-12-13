@@ -3,6 +3,8 @@ package study.algorithm.greedy;
 /*
 - 주유소
 
+제일 왼쪽 도시에서 제일 오른쪽 도시로 가는 최소 비용을 출력한다. 
+
 [입력]
 4
 2 3 1

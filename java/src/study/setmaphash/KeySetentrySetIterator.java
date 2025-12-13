@@ -17,32 +17,36 @@ public class KeySetentrySetIterator {
 		
 		String key = "김영신";
 		int value = map.get(key);
-		//김영신의 key값 95
+		
+		// 김영신의 key값 95
 		System.out.println(key + " : " + value);
 		System.out.println();
 		
-		//키 Seet 컬렉션을 얻고, 반복해서 값 얻기
+		// 키 Seet 컬렉션을 얻고, 반복해서 값 얻기
 		Set<String> keySet = map.keySet();
-		//iterator(반복자) : 반복자는 객체 지향적 프로그래밍에서 배열이나 
-		//그와 유사한 자료구조의 내부요소를 순회하는 객체다
+		
+		// iterator(반복자) : 반복자는 객체 지향적 프로그래밍에서 배열이나 
+		// 그와 유사한 자료구조의 내부요소를 순회하는 객체다
 		Iterator<String> keyIterator = keySet.iterator();
-		while(keyIterator.hasNext()) {
+		
+		while (keyIterator.hasNext()) {
 			String k = keyIterator.next();
 			Integer v = map.get(k);
 			System.out.println(k + " : " + v);
 		}
+		
 		System.out.println();
 		
-		//엔트리 Set 컬렉션을 얻고, 반복해서 키와 값을 얻기
+		// 엔트리 Set 컬렉션을 얻고, 반복해서 키와 값을 얻기
 		Set<Entry<String, Integer>> entrySet = map.entrySet();
 		Iterator<Entry<String, Integer>> entryIterator = entrySet.iterator();
-		while(entryIterator.hasNext()) {
+		
+		while (entryIterator.hasNext()) {
 			Entry<String, Integer> entry = entryIterator.next();
 			String k = entry.getKey();
 			Integer v = entry.getValue();
 			System.out.println(k + " : " + v);
 		}
-		System.out.println();
 		
 		System.out.println("총 Entry 수 : " + entrySet.size());
 		System.out.println();
