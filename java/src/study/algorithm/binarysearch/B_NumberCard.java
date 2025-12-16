@@ -1,6 +1,17 @@
 package study.algorithm.binarysearch;
 
-/* 숫자카드
+/* 
+- 숫자카드
+
+숫자 카드는 정수 하나가 적혀져 있는 카드이다. 
+상근이는 숫자 카드 N개를 가지고 있다. 
+
+정수 M개가 주어졌을 때, 이 수가 적혀있는 숫자 카드를 
+상근이가 가지고 있는지 아닌지를 구하는 프로그램을 작성하시오.
+
+첫째 줄에 입력으로 주어진 M개의 수에 대해서, 
+각 수가 적힌 숫자 카드를 상근이가 가지고 있으면 1을, 
+아니면 0을 공백으로 구분해 출력한다.
 
 [입력]
 5
@@ -49,6 +60,7 @@ public class B_NumberCard {
 		bw.close();
 	}
 	
+    // 값 찾기
 	public static int BinarySearch(int num) {
 		int lo = 0;
 		int hi = N - 1;
@@ -72,25 +84,3 @@ public class B_NumberCard {
 	}
 
 }
-
-//	public static int BinarySearch1(int[] arr, int key) {
-//		int lo = 0; 
-//		int hi = arr.length-1;
-//		
-//		//이진탐색에서는 lo <= hi
-//		while(lo <= hi) {
-//			int mid = (lo + hi) / 2;
-//			
-//			if(arr[mid] > key) {
-//				hi = mid - 1;
-//			}
-//			else if(arr[mid] < key) {
-//				lo = mid + 1;
-//			}
-//			else {
-//				return mid;
-//			}
-//		}
-//		return 0;
-//	}
-

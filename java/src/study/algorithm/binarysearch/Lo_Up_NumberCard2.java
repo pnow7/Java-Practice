@@ -1,6 +1,11 @@
 package study.algorithm.binarysearch;
 
 /*
+- 숫자 카드 2
+
+상근이는 숫자 카드 N개를 가지고 있다.
+정수 M개가 주어졌을 때, 
+이 수가 적혀있는 숫자 카드를 상근이가 몇 개 가지고 있는지 구하라 
 
 [입력]
 10
@@ -45,6 +50,7 @@ public class Lo_Up_NumberCard2 {
         
     }
 
+    // 인덱스 찾기 (최소)
     static int lowerBound(int[] arr, int target) {
         int lo = 0;
         int hi = arr.length;
@@ -63,6 +69,7 @@ public class Lo_Up_NumberCard2 {
         return lo;
     }
 
+    // 인덱스 찾기 (최대)
     static int upperBound(int[] arr, int target) {
         int lo = 0;
         int hi = arr.length;
