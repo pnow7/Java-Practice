@@ -86,4 +86,39 @@ for (Map.Entry<String, Integer> entry : map.entrySet()) {
     System.out.println("Key: " + key + ", Value: " + value);
 }
 
+[Stream API] => 테스트 결과 실행속도는 더 느렸음. 메모리만 더 차지
+- 향상된 버전 (오름차순)
+map.entrySet().stream()
+    // Key(확장자 이름)를 기준으로 사전순(오름차순) 정렬
+    .sorted(Map.Entry.comparingByKey()) 
+    // 정렬된 결과를 순회하며 출력
+    .forEach(entry -> {
+        System.out.println(entry.getKey() + " " + entry.getValue());
+    });
+
+- 향상된 버전 (내림차순)
+map.entrySet().stream()
+	.sorted(Map.Entry.comparingByKey().reversed())
+	.forEach(entry -> {
+		System.out.println(entry.getKey() + " " + entry.getValue());
+	});
+
+- 조건 버전
+map.entrySet().stream()
+    .sorted(
+        // 1. 주 정렬 기준: Value (개수) 내림차순
+        Map.Entry.comparingByValue(Comparator.reverseOrder())
+        // 2. 보조 정렬 기준: Key (확장자 이름) 오름차순 (기본값)
+        .thenComparing(Map.Entry.comparingByKey()) 
+    )
+    .forEach(entry -> {
+        System.out.println(entry.getKey() + " " + entry.getValue());
+    });
+
+// 출력 순서:
+// 1. txt 3 (가장 많음)
+// 2. icpc 2 (개수가 2로 같음, 알파벳 순서대로 icpc가 spc보다 먼저 옴)
+// 3. spc 2 (개수가 2로 같음)
+// 4. world 1
+
 */
