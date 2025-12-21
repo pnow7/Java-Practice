@@ -1,4 +1,4 @@
-# Java-Js-Algorithm Study & Baekjoon Solutions
+# Java-Js-Algorithm Study
 📂 이 레포지토리는 **Java / JavaScript(Node.js)로 작성된 알고리즘 코드**와  
 💻 **Baekjoon Online Judge(BOJ) 문제 풀이 및 자바 공부**를 정리한 공간입니다.
 
