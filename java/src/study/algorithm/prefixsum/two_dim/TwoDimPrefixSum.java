@@ -1,7 +1,7 @@
 package study.algorithm.prefixsum.two_dim;
 
 /*
-2차원 배열 구간합 구하기
+- 2차원 배열 구간합 구하기
 : 처음 설정된 좌표부터 이후 설정된 좌표로 사각형을 만들어서 합을 구함
 
 [입력]
@@ -37,7 +37,7 @@ package study.algorithm.prefixsum.two_dim;
 import java.io.*;
 import java.util.*;
 
-public class Main11660 {
+public class TwoDimPrefixSum {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

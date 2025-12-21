@@ -1,7 +1,7 @@
 package study.algorithm.dp;
 
 /*
-- LCS (9251)
+- - 가장 긴 증가하는 부분 수열
 
 LCS(Longest Common Subsequence, 최장 공통 부분 수열)
 

@@ -1,6 +1,10 @@
 package study.algorithm.prefixsum.one_dim;
 
 /*
+- 수열
+
+매일 측정한 온도가 정수의 수열로 주어졌을 때, 
+연속적인 며칠 동안의 온도의 합이 가장 큰 값을 계산하는 프로그램을 작성하시오.
 
 [입력]
 10 2
@@ -19,7 +23,7 @@ package study.algorithm.prefixsum.one_dim;
 import java.io.*;
 import java.util.*;
 
-public class Main2559 {
+public class Sequence {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

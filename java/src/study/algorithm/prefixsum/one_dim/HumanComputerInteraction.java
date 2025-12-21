@@ -1,6 +1,16 @@
 package study.algorithm.prefixsum.one_dim;
 
 /*
+- 인간-컴퓨터 상호작용
+
+'문자열에서 특정 알파벳이 몇 번 나타나는지 알아봐서 
+자주 나타나는 알파벳이 중지나 검지 위치에 오는 알파벳인지 확인하면 실용적인지 확인할 수 있을 것이다.'
+
+승재를 도와 특정 문자열 S, 
+특정 알파벳 alpha와 문자열의 구간 [l,r]이 주어지면 
+S의 l번째 문자부터 r번째 문자 사이에 
+
+alpha가 몇 번 나타나는지 구하는 프로그램을 작성하여라. 
 
 [입력]
 seungjaehwang
@@ -15,13 +25,12 @@ a 7 10
 1
 2
 1
-
 */
 
 import java.io.*;
 import java.util.*;
 
-public class FMain16139 {
+public class HumanComputerInteraction {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

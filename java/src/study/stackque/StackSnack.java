@@ -1,4 +1,4 @@
-package test.test03.test0331;
+package study.stackque;
 
 /*
 
@@ -29,7 +29,7 @@ Nice
 import java.io.*;
 import java.util.*;
 
-public class FMain12789 {
+public class StackSnack {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

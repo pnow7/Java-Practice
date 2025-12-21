@@ -1,6 +1,10 @@
 package study.algorithm.prefixsum.one_dim;
 
 /*
+- 구간 합 구하기 4 
+
+수 N개가 주어졌을 때, i번째 수부터 j번째 수까지 합을 구하는 프로그램을 작성하시오.
+총 M개의 줄에 입력으로 주어진 i번째 수부터 j번째 수까지 합을 출력한다.
 
 [입력]
 5 3
@@ -19,7 +23,7 @@ package study.algorithm.prefixsum.one_dim;
 import java.io.*;
 import java.util.*;
 
-public class Main11659 {
+public class PrefixSum4 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

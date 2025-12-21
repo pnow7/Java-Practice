@@ -71,7 +71,7 @@ public class CantorSet {
 		
 		// start + newSize : 중간 등분 시작
 		// start + 2*newSize : 마지막 등분 시작
-		for(int i = start+third; i < start+2*third; i++) {
+		for (int i = start+third; i < start+2*third; i++) {
 			// setCharAt(int index, String s): index 위치의 문자를 s로 변경(' '로)
 			// 공백처리
 			sb.setCharAt(i, ' '); 

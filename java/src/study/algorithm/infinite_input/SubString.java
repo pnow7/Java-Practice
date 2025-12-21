@@ -41,6 +41,7 @@ public class SubString {
 		
 		while ((line = br.readLine()) != null) {
 			StringTokenizer st = new StringTokenizer(line);
+			
 			if (!st.hasMoreTokens()) continue;
 			String s = st.nextToken();
 			String t = st.nextToken();
