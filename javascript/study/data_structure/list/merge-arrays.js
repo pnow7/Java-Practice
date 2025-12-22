@@ -24,8 +24,15 @@
 */
 
 const fs = require('fs')
-const input = fs.readFileSync("./input.txt").trim().split(/\+s/);
+const input = fs.readFileSync("../input.txt").toString().trim().split('\n');
 
 let idx = 0;
-const N = Number(input[idx++]);
-const M = Number(input[idx++]);
+
+let [N, M] = input[idx++].split(' ').map(Number);
+let A = input[idx++].split(' ').map(Number);
+let B = input[idx++].split(' ').map(Number);
+
+let merged = [...A, ...B];
+merged.sort((a, b) => a - b);
+
+console.log(merged.join(' '));
